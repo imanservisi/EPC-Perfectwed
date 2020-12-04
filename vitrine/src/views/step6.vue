@@ -1,8 +1,7 @@
 <template>
-
   <div>
     <br>
-    <div class="explication" >
+    <div class="explication"  >
       Le jour J approche ! Bouclez tous les derniers détails de votre mariage.
     </div>
     <br>
@@ -17,7 +16,7 @@
           </div>
           <br>
           <br>
-          <b-card-title class="right">Avez-vous pensé à vos plans de tables ?<img id="popover-target-5" class="pointinfo mb-5" src="../../public/PointinfoPINK.png" align="right">
+          <b-card-title class="right">N'hésitez pas à recontacter tous les acteurs nécessaires à la réalisation de votre mariage !<img id="popover-target-5" class="pointinfo mb-5" src="../../public/PointinfoPINK.png" align="right">
           </b-card-title>
           <div>Illud tamen te esse admonitum volo, primum ut qualis es talem te esse omnes existiment ut, quantum a rerum turpitudine abes, tantum te a verborum libertate seiungas;
           </div>
@@ -38,6 +37,12 @@ export default {
   name: 'step1'
 }
 window.parent.document.title = 'Étape 6'
+
+function startConfetti () {
+  return 'hello'
+}
+
+startConfetti()
 
 </script>
 

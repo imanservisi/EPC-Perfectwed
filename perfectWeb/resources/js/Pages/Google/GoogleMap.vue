@@ -28,6 +28,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   name: "GoogleMap",
   data() {
@@ -56,9 +57,16 @@ export default {
           lat: this.currentPlace.geometry.location.lat(),
           lng: this.currentPlace.geometry.location.lng()
         };
+        this.markers.shift();
         this.markers.push({ position: marker });
         this.places.push(this.currentPlace);
         this.center = marker;
+        // axios.put(
+        //     'http://127.0.0.1:8000/api/projects/',
+        //   {
+        //     "wed_city": this.currentPlace.formatted_address,
+        //   }
+        // )
         this.currentPlace = null;
       }
     },

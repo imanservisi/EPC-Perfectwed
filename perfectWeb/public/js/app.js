@@ -3458,6 +3458,8 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 //
 //
 //
@@ -3487,6 +3489,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "GoogleMap",
   data: function data() {
@@ -3516,11 +3519,18 @@ __webpack_require__.r(__webpack_exports__);
           lat: this.currentPlace.geometry.location.lat(),
           lng: this.currentPlace.geometry.location.lng()
         };
+        this.markers.shift();
         this.markers.push({
           position: marker
         });
         this.places.push(this.currentPlace);
-        this.center = marker;
+        this.center = marker; // axios.put(
+        //     'http://127.0.0.1:8000/api/projects/',
+        //   {
+        //     "wed_city": this.currentPlace.formatted_address,
+        //   }
+        // )
+
         this.currentPlace = null;
       }
     },
@@ -68439,8 +68449,8 @@ axios(config)
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\wamp64\www\pff\perfectWeb\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\wamp64\www\pff\perfectWeb\resources\css\app.css */"./resources/css/app.css");
+__webpack_require__(/*! /home/yann/Rendu/ECP/pff/perfectWeb/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /home/yann/Rendu/ECP/pff/perfectWeb/resources/css/app.css */"./resources/css/app.css");
 
 
 /***/ })

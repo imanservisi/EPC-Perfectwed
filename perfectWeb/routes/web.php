@@ -38,6 +38,10 @@ Route::get('/calculator', function () {
 });
 Route::post('calculation', [App\Http\Controllers\CalculatorController::class, 'index']);
 
+Route::get('/app', function () {
+    return Inertia\Inertia::render('App');
+})->name('app');
+
 Route::get('/step1', function () {
     return Inertia\Inertia::render('step1');
 })->name('step1');

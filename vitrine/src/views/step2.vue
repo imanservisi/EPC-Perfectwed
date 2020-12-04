@@ -1,7 +1,6 @@
 <template>
-
   <div>
-    <img class="centerimg mt-3 mb-3" src="../../public/stepbystep/2.png" alt="step1">
+    <br>
     <div class="explication" >
      Place à la seconde étape ! C'est le moment de rentrer dans les détails de la planification du mariage...
     </div>
@@ -20,12 +19,11 @@
           <div>Une fois prise la décision de se marier, le plus important est de fixer le lieu du mariage. Aujourd'hui le plus courant est de célébrer le mariage civil à la mairie et le mariage religieux dans une eglise.</div>
           <br>
           <br>
-          <br>
           <b-card-title>Choix des témoins
             <img id="popover-target-1" class="pointinfo mb-5" src="../../public/PointinfoPINK.png" align="right">
           </b-card-title>
           <br>
-          <div> Au cours des préparatifs de votre mariage vous allez être confrontée à de nombreux choix difficiles et d’une grande importance pour la suite des événements. Choisir la bonne personne comme témoin fait partie de ces dilemmes.</div>
+          <div> Au cours des préparatifs de votre mariage vous allez être confrontée à de nombreux choix pour la suite des événements. Choisir la bonne personne comme témoin fait partie de ces dilemmes.</div>
           <b-popover target="popover-target-1" triggers="hover" placement="top">
             <template #title>Quels sont les différents types de cérémonies ?</template>
             Les types de cérémonies de mariage sont désormais diversifiés. <br>
@@ -74,7 +72,7 @@
         </b-col>
         <b-col>
           <b-card-title> Envoyez vos faire-part
-            <img id="popover-target-3" class="pointinfo mb-5" src="../../public/PointinfoPINK.png" align="right">
+            <img id="popover-target-3" class="pointinfo" src="../../public/PointinfoPINK.png" align="right">
           </b-card-title>
           <br>
           <div>Etape clé dans l’organisation de votre mariage, le fameux faire-part sera non seulement la première annonce de votre heureux événement mais permettra également de donner le ton de votre joli jour !</div>
@@ -89,6 +87,7 @@
         </b-col>
       </b-row>
     </b-container>
+    <img class="centerimg mt-3 mb-3" src="../../public/stepbystep/2.png" alt="step1">
   </div>
 </template>
 <script>

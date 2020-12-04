@@ -1,7 +1,7 @@
 <template>
 
 <div>
-  <img class="centerimg mt-3 mb-3" src="../../public/stepbystep/1.png" alt="step1">
+  <br>
   <div class="explication" >
     Bravo ! Vous souhaitez réaliser vous-même votre plus beau rêve. Il est temps de commencer à planifier votre mariage... C’est le
     <br>
@@ -79,11 +79,11 @@
         ></b-form-input>
         <br>
         <br>
-       <div class="etapesuivante" align="center"> Je passe à l'étape suivante !<img  class="pointinfo mb-5" src="../../public/right-arrow.png" align="right"></div>
+       <div class="etapesuivante" align="center"> Je passe à l'étape suivante !<img  class="pointinfo" src="../../public/right-arrow.png" align="right"></div>
       </b-col>
     </b-row>
   </b-container>
-
+  <img class="centerimg mt-3 mb-3" src="../../public/stepbystep/1.png" alt="step1">
 </div>
 </template>
 

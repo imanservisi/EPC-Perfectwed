@@ -1,88 +1,43 @@
 <template>
 
   <div>
-    <img class="centerimg mt-3 mb-3" src="../../public/stepbystep/4.png" alt="step1">
+    <br>
     <div class="explication" >
-      Bravo ! Vous souhaitez réaliser vous-même votre plus beau rêve. Il est temps de commencer à planifier votre mariage... C’est le
-      <br>
-      moment d’indiquer les premières informations nécessaires à sa réalisation. Vous n’êtes pas sur de certaines informations ?
-      <br>
-      Ce n’est pas grave ! Vous pourrez les modifier plus tard dans l’onglet ‘récapitulatif’.
+      Votre mariage a lieu dans 6 mois ! C'est le moment de confirmer, faire le point avec vos partenaires, faire les papiers nécessaires...
     </div>
     <br>
     <br>
     <b-container fluid >
       <b-row>
-        <b-col class="center"> <b-calendar label-help="" label-no-date-selected="Choisissez la date de votre mariage"></b-calendar>
-        </b-col>
-        <b-col>
-          <div>Lieu</div>
+        <b-col class="right">
+          <b-card-title class="right">Avez-vous contacté tous les professionnels ?<img id="popover-target-2" class="pointinfo mb-5" src="../../public/PointinfoPINK.png" align="right">
+          </b-card-title>
+          <div> Confirmez la venue de tous vos partenaires, si il manque le traiteur, dépêchez-vous, plus la date du mariage s'approche, plus il est difficile de trouver des professionnels.</div>
           <br>
-          <b-form-input
-            id="inline-form-input-name" class="mb-2 mr-sm-2 mb-sm-0" placeholder="Quel est le lieu de votre mariage ?"
-          ></b-form-input>
-          <br> <br>
-          Nombre d'invités
           <br>
-          <b-form-input
-            id="inline-form-input-name" class="mb-0 mr-sm-2 mb-sm-0" placeholder="Combien de personnes souhaitez-vous inviter ?"
-          ></b-form-input>
-          <br> <br>
-          <img id="popover-target-1" class="pointinfo mb-5" src="../../public/PointinfoPINK.png" align="center">
+          <b-card-title class="right">Avez-vous commencé les essayages ?<img id="popover-target-3" class="pointinfo mb-5" src="../../public/PointinfoPINK.png" align="right">
+          </b-card-title>
+          <div> Si ce n'est pas le cas, pensez à prendre rendez-vous pour essayer votre robe de mariée, et pour monsieur, son costume.</div>
 
-          <b-popover target="popover-target-1" triggers="hover" placement="top">
-            <template #title>Quels sont les différents types de cérémonies ?</template>
-            Les types de cérémonies de mariage sont désormais diversifiés. <br>
-            Les couples qui souhaitent se marier se demandent quelle option choisir pour la célébration de leur mariage.<br>
-            Découvrons chacun les différents types de cérémonies pour vous aider à choisir.<br>
-            <b>La cérémonie civile :</b> <br>
-            Cette cérémonie est la première étape que franchit les mariées afin d’établir leur union.
-            Habituellement, les couples passent par le mariage civil avant d’aller à l’église pour la cérémonie,
-            que ce soit le même jour ou des jours différents.
-            La cérémonie civile est la seule qui a de la valeur aux yeux de l’Etat,
-            c’est la seule qui permettra de se marier officiellement.
-            Elle a lieu dans le bureau de la mairie et la célébration est dirigée par des fonctionnaires de l’Etat.
-            <br>
-            <b>La cérémonie religieuse : </b><br>
-            C’est la cérémonie qui est conforme à la religion et aux croyances des mariés.
-            La majorité des couples qui passent par la cérémonie religieuse,
-            sont des couples qui appartiennent à une communauté religieuse.
-            Cette cérémonie est réalisée pour faire reconnaître le mariage devant Dieu et aussi pour recevoir
-            la bénédiction de Dieu pendant la vie du couple.
-            Il y a des rituels que ce concept doit suivre pendant la cérémonie.
-            Ce sont les dignitaires religieux qui doivent diriger la cérémonie.
-            <br>
-            <b>La cérémonie laïque </b>:
-            <br>
-            Cette cérémonie n’est ni civile ni religieuse.
-            C’est seulement une manière symbolique de célébrer l’amour sans passer par l’église.
-            Ce sont les couples non croyants qui choisissent cette option.
-            C’est un moment plus émouvant et romantique où les deux partenaires partagent leur histoire d’amour.
-            Il n’y a pas de rituel obligatoire, mais la future mariée et le futur marié choisissent d’eux-mêmes
-            comment ils vont procéder à la célébration de leur mariage. Ils peuvent y ajouter une touche de personnalisation
-            qui leur convient.
-          </b-popover>
         </b-col>
         <b-col>
-          <div> Cérémonie(s) (civile, religieuse...)</div>
-          <br>
-          <b-form-input
-            id="inline-form-input-name" class="mb-2 mr-sm-2 mb-sm-0" placeholder=""
-          ></b-form-input>
-          <br> <br>
-          Budget prévisionnel
-          <br>
-          <b-form-input
-            id="inline-form-input-name"
-            class="mb-0 mr-sm-2 mb-sm-0"
-            placeholder=""
-          ></b-form-input>
+          <b-card-title class="right">Faites un point administratif.<img id="popover-target-4" class="pointinfo mb-5" src="../../public/PointinfoPINK.png" align="right">
+          </b-card-title>
+          <div> C'est le moment de lister tous ce qui a déjà été fait. Renvoyez les papiers manquants, les demandes de devis...</div>
           <br>
           <br>
-          <div class="etapesuivante" align="center"> Je passe à l'étape suivante !<img  class="pointinfo mb-5" src="../../public/right-arrow.png" align="right"></div>
+          <b-card-title class="right">Commencez votre liste de mariage !<img id="popover-target-5" class="pointinfo mb-5" src="../../public/PointinfoPINK.png" align="right">
+          </b-card-title>
+          <div>  La liste de mariage est une tradition qui consiste à permettre aux invités de participer
+            <br>
+            à la fondation du foyer des époux. De nombreux site internet peuvent vous aider à la faire.</div>
+          <br>
+          <br>
+          <div class="etapesuivante" align="center"> Je passe à l'étape suivante !<img  class="pointinfo" src="../../public/right-arrow.png" align="right"></div>
         </b-col>
       </b-row>
     </b-container>
+    <img class="centerimg mt-3 mb-3" src="../../public/stepbystep/4.png" alt="step1">
 
   </div>
 </template>

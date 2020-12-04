@@ -1,7 +1,6 @@
 <template>
-
   <div>
-    <img class="centerimg mt-3 mb-3" src="../../public/stepbystep/3.png" alt="step1">
+    <br>
     <div class="explication" >
       On continue de visualiser son plus beau jour dans les moindres détails...
       <br>
@@ -15,7 +14,7 @@
           <b-card-title class="right">Choisissez votre tenue <img id="popover-target-2" class="pointinfo mb-5" src="../../public/PointinfoPINK.png" align="right">
           </b-card-title>
           <img src="../../public/dresscostume.png" height="250" width="auto" align="center"/>
-          <div>  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc auctor risus ut nisi porttitor sodales. Fusce convallis molestie turpis eget cursus. Morbi</div>
+          <div>  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc auctor risus ut nisi porttitor sodales.</div>
         </b-col>
         <b-col>
           <b-card-title class="center">Trouvez le thème parfait ! </b-card-title>
@@ -29,13 +28,12 @@
             <img class="center" src="../../public/manger.jpg" height="220" width="auto"/>
             <br>
             <br>
-            <div class="etapesuivante" align="center"> Je passe à l'étape suivante !<img  class="pointinfo mb-5" src="../../public/right-arrow.png" align="right"></div>
-
+            <div class="etapesuivante" align="center"> Je passe à l'étape suivante !<img  class="pointinfo" src="../../public/right-arrow.png" align="right"></div>
           </b-card-title>
         </b-col>
       </b-row>
     </b-container>
-
+    <img class="centerimg mt-3 mb-3" src="../../public/stepbystep/3.png" alt="step1">
   </div>
 </template>
 

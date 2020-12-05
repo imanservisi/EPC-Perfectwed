@@ -1,5 +1,5 @@
 <template>
-
+  <app-layout>
   <div >
     <div class="explication" v-on:mouseover="start">
       C'est le jour J : Félicitations !!!
@@ -38,10 +38,16 @@
           </b-popover>
     <img class="centerimg mt-3 mb-3" src="../../../public/stepbystep/8.png" alt="step1">
   </div>
+    </app-layout>
 </template>
 
 <script>
+  import AppLayout from '@/Layouts/AppLayout'
+
 export default {
+            components: {
+            AppLayout
+        },
   name: 'step8',
   methods: {
     start () {

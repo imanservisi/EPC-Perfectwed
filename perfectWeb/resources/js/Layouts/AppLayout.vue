@@ -95,7 +95,7 @@
                                     <!-- Authentication -->
                                     <form @submit.prevent="logout">
                                         <jet-dropdown-link as="button">
-                                            Déconnection
+                                            Déconnexion
                                         </jet-dropdown-link>
                                     </form>
                                 </template>
@@ -148,7 +148,7 @@
                         <!-- Authentication -->
                         <form method="POST" @submit.prevent="logout">
                             <jet-responsive-nav-link as="button">
-                                Déconnection
+                                Déconnexion
                             </jet-responsive-nav-link>
                         </form>
 

@@ -1,4 +1,5 @@
 <template>
+  <app-layout>
   <div>
     <br>
     <div class="explication" >
@@ -35,12 +36,17 @@
     </b-container>
     <img class="centerimg mt-3 mb-3" src="../../../public/stepbystep/3.png" alt="step1">
   </div>
+    </app-layout>
 </template>
 
 <script>
+  import AppLayout from '@/Layouts/AppLayout'
 
 export default {
-  name: 'step1'
+            components: {
+            AppLayout
+            },
+  name: 'step3'
 }
 window.parent.document.title = 'Étape 3'
 

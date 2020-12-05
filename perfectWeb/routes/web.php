@@ -42,6 +42,10 @@ Route::get('/app', function () {
     return Inertia\Inertia::render('App');
 })->name('app');
 
+Route::get('/board', function () {
+    return Inertia\Inertia::render('Board');
+})->name('board');
+
 Route::get('/step1', function () {
     return Inertia\Inertia::render('step1');
 })->name('step1');

@@ -1,6 +1,7 @@
 <template>
     <app-layout>
     <google-map />
+    <div class="gotosteps" align="center"> Suivez le guide !<a href="/step1"><img  class="pointinfo" src="../../../public/right-arrow.png" align="right"></a></div>
     </app-layout>
 </template>
 

@@ -29,7 +29,7 @@
             <img class="center" src="../../../public/manger.jpg" height="220" width="auto"/>
             <br>
             <br>
-            <div class="etapesuivante" align="center"> Je passe à l'étape suivante !<img  class="pointinfo" src="../../../public/right-arrow.png" align="right"></div>
+            <div class="etapesuivante" align="center"> Je passe à l'étape suivante !<a href='/step4'><img  class="pointinfo" src="../../../public/right-arrow.png" align="right"></a></div>
           </b-card-title>
         </b-col>
       </b-row>

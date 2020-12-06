@@ -84,7 +84,7 @@
           <br>
           <br>
           <br>
-          <div class="etapesuivante" align="center"> Je passe à l'étape suivante !<img  class="pointinfo mb-5" src="../../../public/right-arrow.png" align="right"></div>
+          <div class="etapesuivante" align="center"> Je passe à l'étape suivante !<a href='/step3'><img  class="pointinfo mb-5" src="../../../public/right-arrow.png" align="right"></a></div>
         </b-col>
       </b-row>
     </b-container>

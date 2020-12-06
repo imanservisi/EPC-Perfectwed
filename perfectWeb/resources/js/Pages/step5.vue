@@ -36,7 +36,7 @@
           </div>
           <br>
           <br>
-          <div class="etapesuivante" align="center"> Je passe à l'étape suivante !<img  class="pointinfo" src="../../../public/right-arrow.png" align="right"></div>
+          <div class="etapesuivante" align="center"> Je passe à l'étape suivante !<a href='/step6'><img  class="pointinfo" src="../../../public/right-arrow.png" align="right"></a></div>
         </b-col>
       </b-row>
     </b-container>

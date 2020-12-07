@@ -13,19 +13,19 @@
   <br>
   <b-container fluid >
     <b-row>
-      <b-col class="center"> <b-calendar label-help="" label-no-date-selected="Choisissez la date de votre mariage"></b-calendar>
+      <b-col class="center"> <b-calendar label-help="" @context="updatedb()" name="wed_date"  :value="data.wed_date" v-model="data.wed_date"  label-no-date-selected="Choisissez la date de votre mariage"></b-calendar>
       </b-col>
       <b-col>
         <div>Lieu</div>
         <br>
         <b-form-input
-          id="inline-form-input-name" class="mb-2 mr-sm-2 mb-sm-0" placeholder="Quel est le lieu de votre mariage ?"
+          id="inline-form-input-name" name="wed_city" @change="updatedb()" :value="data.wed_city" v-model="data.wed_city" class="mb-2 mr-sm-2 mb-sm-0" placeholder="Quel est le lieu de votre mariage ?"
         ></b-form-input>
         <br> <br>
         Nombre d'invités
         <br>
         <b-form-input
-          id="inline-form-input-name" class="mb-0 mr-sm-2 mb-sm-0" placeholder="Combien de personnes souhaitez-vous inviter ?"
+          id="inline-form-input-name" name="wed_city" @change="updatedb()" :value="data.nb_guest" v-model="data.nb_guest" class="mb-0 mr-sm-2 mb-sm-0" placeholder="Combien de personnes souhaitez-vous inviter ?"
         ></b-form-input>
         <br> <br>
         <img id="popover-target-1" class="pointinfo mb-5" src="../../public/PointinfoPINK.png" align="center">
@@ -67,19 +67,21 @@
         <div> Cérémonie(s) (civile, religieuse...)</div>
         <br>
         <b-form-input
-          id="inline-form-input-name" class="mb-2 mr-sm-2 mb-sm-0" placeholder=""
+          id="inline-form-input-name" @change="updatedb()" class="mb-2 mr-sm-2 mb-sm-0" name="ceremony"  :value="data.ceremony" v-model="data.ceremony"  placeholder=""
         ></b-form-input>
         <br> <br>
         Budget prévisionnel
         <br>
         <b-form-input
+          name="budget"  :value="data.budget" v-model="data.budget"
+          @change="updatedb()"
           id="inline-form-input-name"
           class="mb-0 mr-sm-2 mb-sm-0"
           placeholder=""
         ></b-form-input>
         <br>
         <br>
-       <div class="etapesuivante" align="center"> Je passe à l'étape suivante !<img  class="pointinfo" src="../../public/right-arrow.png" align="right"></div>
+       <div class="etapesuivante" align="center" @click="gotoStep2()"> Je passe à l'étape suivante !<img  class="pointinfo" src="../../public/right-arrow.png" align="right"></div>
       </b-col>
     </b-row>
   </b-container>
@@ -88,12 +90,42 @@
 </template>
 
 <script>
-
+import axios from 'axios'
 export default {
-  name: 'step1'
+  name: 'step1',
+  data () {
+    return {
+      data: {
+        wed_date: null,
+        wed_address: null,
+        budget: null,
+        nb_guest: null,
+        ceremony: null
+      },
+      apiProjectsUrl: 'http://localhost:8000/api/projects/'
+    }
+  },
+  methods: {
+    updatedb () {
+      console.log(this.data)
+      axios.put(
+        this.apiProjectsUrl + 1, // 1 a remplacer par project id
+        this.data
+      ).then(function (response) {
+        console.log(response)
+      })
+    },
+  },
+  mounted () {
+    axios.get(this.apiProjectsUrl + '?user_id=1') // remplacer 1 par variable de seession
+      .catch(error => console.log(error))
+      .then(response => {
+        // console.log(response.data.projects)
+        this.data = response.data.projects[0]
+        console.log(this.data)
+      })
+  }
 }
-window.parent.document.title = 'Étape 1'
-
 </script>
 
 <style scoped>

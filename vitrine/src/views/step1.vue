@@ -81,7 +81,7 @@
         ></b-form-input>
         <br>
         <br>
-       <div class="etapesuivante" align="center" @click="gotoStep2()"> Je passe à l'étape suivante !<img  class="pointinfo" src="../../public/right-arrow.png" align="right"></div>
+       <div class="etapesuivante" align="center" @click="gotoStep2()"><router-link to="step2"> Je passe à l'étape suivante !<img  class="pointinfo" src="../../public/right-arrow.png" align="right"></router-link></div>
       </b-col>
     </b-row>
   </b-container>
@@ -115,6 +115,8 @@ export default {
         console.log(response)
       })
     },
+    gotoStep2 () {
+    }
   },
   mounted () {
     axios.get(this.apiProjectsUrl + '?user_id=1') // remplacer 1 par variable de seession

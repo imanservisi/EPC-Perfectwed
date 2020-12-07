@@ -75,7 +75,3 @@ Route::get('/step8', function () {
 Route::get('/step9', function () {
     return Inertia\Inertia::render('step9');
 })->name('step9');
-
-Route::get('/step10', function () {
-    return Inertia\Inertia::render('step9');
-})->name('step10');

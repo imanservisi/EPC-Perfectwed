@@ -75,3 +75,6 @@ Route::get('/step8', function () {
 Route::get('/step9', function () {
     return Inertia\Inertia::render('step9');
 })->name('step9');
+
+Route::delete('users/force/{user}', [UserController::class, 'forceDestroy'])->name('users.force.destroy');
+Route::put('users/restore/{users}', [UserController::class, 'restore'])->name('users.restore');

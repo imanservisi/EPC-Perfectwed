@@ -14,7 +14,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::all();
+        $users = User::withTrashed()->oldest('name')->paginate(5);
         return view('users.index', compact('users'));
     }
 
@@ -31,31 +31,31 @@ class UserController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
         $request->validate([
-            'name'=>'required',
-            'email'=>'required',
+            'name' => 'required',
+            'email' => 'required',
 
         ]);
         $user = new User([
             'name' => $request->get('name'),
-            'email'=> $request->get('email'),
-            'password'=> bcrypt($request->get('password')),
-            'admin'=>$request->get('admin'),
-            'active'=>$request->get('active'),
+            'email' => $request->get('email'),
+            'password' => bcrypt($request->get('password')),
+            'admin' => $request->get('admin'),
+            'active' => $request->get('active'),
         ]);
         $user->save();
-        return redirect('/users')->with('success','Contact saved!');
+        return redirect('/users')->with('success', 'Contact saved!');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -66,7 +66,7 @@ class UserController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -78,15 +78,15 @@ class UserController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param \Illuminate\Http\Request $request
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
     {
         $request->validate([
-           'name'=>'required',
-           'email'=>'required',
+            'name' => 'required',
+            'email' => 'required',
         ]);
         $user = User::find($id);
         $user->name = $request->get('name');
@@ -101,7 +101,7 @@ class UserController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
@@ -110,4 +110,18 @@ class UserController extends Controller
         $user->delete();
         return redirect('/users')->with('success', 'User deleted!');
     }
+
+    public function forceDestroy($id)
+    {
+        User::withTrashed()->whereId($id)->firstOrFail()->forceDelete();
+        return back()->with('name', 'Le film a bien été supprimé définitivement dans la base de données.');
+    }
+
+    public function restore($id)
+    {
+        User::withTrashed()->whereId($id)->firstOrFail()->restore();
+        return back()->with('name', 'Le film a bien été restauré.');
+    }
 }
+
+

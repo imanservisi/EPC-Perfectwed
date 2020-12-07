@@ -24,7 +24,9 @@
                     <td>Email</td>
                     <td>Active</td>
                     <td>Date création</td>
-                    <td></td>
+                    <td>Date de désactivation</td>
+                    <td>Mettre à jour</td>
+                    <td>Supprimer</td>
                     <td></td>
 
 
@@ -32,25 +34,42 @@
                 </thead>
                 <tbody>
                 @foreach($users as $user)
-                    <tr>
+                    <tr  @if($user->deleted_at) class="has-background-grey-lighter" @endif>
                         <td>{{$user->id}}</td>
                         <td>{{$user->admin}}</td>
                         <td>{{$user->name}}</td>
                         <td>{{$user->email}}</td>
                         <td>{{$user->active}}</td>
                         <td>{{$user->created_at}}</td>
-
+                        <td> @if($user->deleted_at)
+                                {{$user->deleted_at}} </td>
+                        @else
+                            @endif
                         <td>
+                            @if($user->deleted_at)
+                            @else
                             <a href="{{ route('users.edit',$user->id)}}" class="btn btn-primary">Mettre à jour</a>
+                            @endif
                         </td>
                         <td>
-                            <form action="{{ route('users.destroy', $user->id)}}" method="post">
+                            <form action="{{ route($user->deleted_at? 'users.force.destroy' : 'users.destroy', $user->id) }}" method="post">
                                 @csrf
                                 @method('DELETE')
                                 <button class="btn btn-danger" type="submit">Effacer</button>
                             </form>
                         </td>
+                        @if($user->deleted_at)
+                            {{$user->deleted_at}}
+                            <td>
+                                <form action="{{ route('users.restore', $user->id) }}" method="post">
+                            @csrf
+                            @method('PUT')
+                                <button class="button btn btn-secondary btn-sm" type="submit">Restaurer</button>
+                            </form>
+                        @else
+                        @endif
                     </tr>
+
                 @endforeach
                 </tbody>
             </table>

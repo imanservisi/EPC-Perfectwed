@@ -10,17 +10,18 @@
     <b-container fluid >
       <b-row>
         <b-col class="right">
-          <b-card-title class="right">Quel temps fera t-il pour mon mariage ?<img id="popover-target-2" class="pointinfo mb-5" src="../../../public/PointinfoPINK.png" align="right">
+          <b-card-title class="right">Quel temps fera t-il pour mon mariage ?
           </b-card-title>
           <div class="info">
-            Illud tamen te esse admonitum volo, primum ut qualis es talem te esse omnes existiment ut, quantum a rerum turpitudine abes, tantum te a verborum libertate seiungas;
+              En été comme en hiver, mieux vaut être prévenu. Fera-t-il froid ? Y aura-t-il de la pluie ? Faut il prévoir une sécurité ?<br>
+          <a href="https://meteofrance.com/">Quelle météo pour le Jour J ?</a>
           </div>
           <br>
           <br>
-          <b-card-title class="right">Avez-vous prévu une répétition ?<img id="popover-target-3" class="pointinfo mb-5" src="../../../public/PointinfoPINK.png" align="right">
+          <b-card-title class="right">Avez-vous prévu une répétition ?
           </b-card-title>
           <div class="info">
-            Illud tamen te esse admonitum volo, primum ut qualis es talem te esse omnes existiment ut, quantum a rerum turpitudine abes, tantum te a verborum libertate seiungas;
+            Ce n'est pas une obligation, mais il faut l'avoir prévue à l'avance, pour que tout le monde soit disponible. Par contre, ne vous froissez pas si certains services ne le font pas (mairie, église). Il n'est pas toujours facile d'avoir l'accès à des lieux publics.
           </div>
 
         </b-col>
@@ -28,14 +29,14 @@
           <b-card-title class="right">Dernières retouches<img id="popover-target-4" class="pointinfo mb-5" src="../../../public/PointinfoPINK.png" align="right">
           </b-card-title>
           <div class="info">
-            Illud tamen te esse admonitum volo, primum ut qualis es talem te esse omnes existiment ut, quantum a rerum turpitudine abes, tantum te a verborum libertate seiungas;
+            Il est grand temps que votre costume/robe soit prêt et récupéré. Si ce n'est pas déjà fait, reprenez contact avec la boutique pour finaliser.
           </div>
           <br>
           <br>
           <b-card-title class="right">Planification/Définition des tâches de chacun<img id="popover-target-5" class="pointinfo mb-5" src="../../../public/PointinfoPINK.png" align="right">
           </b-card-title>
           <div class="info">
-            Illud tamen te esse admonitum volo, primum ut qualis es talem te esse omnes existiment ut, quantum a rerum turpitudine abes, tantum te a verborum libertate seiungas;
+            Qui va conduire les mariés ? Qui prépare la salle et quand ? Qui amène les alliances ? Tous ces petits détails doivent être réfléchis et délégués (qui a parlé des témoins ?)
           </div>
           <br>
           <br>

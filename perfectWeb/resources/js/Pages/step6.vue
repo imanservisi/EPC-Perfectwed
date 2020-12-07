@@ -10,16 +10,16 @@
     <b-container fluid >
       <b-row>
         <b-col>
-          <b-card-title class="right">Posez vos congés !<img id="popover-target-4" class="pointinfo mb-5" src="../../../public/PointinfoPINK.png" align="right">
+          <b-card-title class="right">Posez vos congés !
           </b-card-title>
           <div class="info">
-            Illud tamen te esse admonitum volo, primum ut qualis es talem te esse omnes existiment ut, quantum a rerum turpitudine abes, tantum te a verborum libertate seiungas;
+            Si vous vous mariez civilement, sachez que vous avez droit à 4 jours de congés au moins. Certaines entreprises en octroient plus, vérifiez votre convention collective. Par contre, la date du mariage doit être incluse dans les congés pris.
           </div>
           <br>
           <br>
-          <b-card-title class="right">N'hésitez pas à recontacter tous les acteurs nécessaires à la réalisation de votre mariage !<img id="popover-target-5" class="pointinfo mb-5" src="../../../public/PointinfoPINK.png" align="right">
+          <b-card-title class="right">N'hésitez pas à recontacter tous les acteurs nécessaires à la réalisation de votre mariage !
           </b-card-title>
-          <div class="info">Illud tamen te esse admonitum volo, primum ut qualis es talem te esse omnes existiment ut, quantum a rerum turpitudine abes, tantum te a verborum libertate seiungas;
+          <div class="info">Il est temps de commencer à boucler : le nombre des invités a-t-il été envoyé au traiteur ? La décoration est elle prête à être installée dans la salle ? Les costumes sont ils récupérés ?
           </div>
           <br>
           <br>

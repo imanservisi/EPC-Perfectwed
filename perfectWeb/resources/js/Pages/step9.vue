@@ -9,16 +9,26 @@
     <b-container fluid >
       <b-row>
         <b-col>
-          <b-card-title class="right">Remerciez tous vos partenaires, amis et famille.<img id="popover-target-4" class="pointinfo mb-5" src="../../../public/PointinfoPINK.png" align="right">
+            <b-card-title class="right">Récupérez les photos de vos invités !
+            </b-card-title>
+            <div class="info">
+                Pensez aussi à récupérer les photos du professionnel, afin de garder un souvenir de ce jour si particulier.<br>
+                <a href="https://photos.google.com">Un endroit pour mutualiser toutes les photos</a>
+            </div>
+            <br>
+            <br>
+          <b-card-title class="right">Remerciez tous vos partenaires, amis et famille.
           </b-card-title>
           <div class="info">
-            Illud tamen te esse admonitum volo, primum ut qualis es talem te esse omnes existiment ut, quantum a rerum turpitudine abes, tantum te a verborum libertate seiungas;
+            Les remerciements sont aussi important que les faire-part. Beaucoup de monde a participé à cet évènement, il faut leur dire que vous l'avez vu et apprécié.
           </div>
           <br>
           <br>
-          <b-card-title class="right">Laissez-nous un avis sur votre expérience avec My Perfect Wedding !<img id="popover-target-5" class="pointinfo mb-5" src="../../../public/PointinfoPINK.png" align="right">
+          <b-card-title class="right">Laissez-nous un avis sur votre expérience avec My Perfect Wedding !
           </b-card-title>
-          <div>
+          <div class="info">
+              Votre avis nous est précieux pour faire évoluer notre site. Vous pouvez également nous attribuer une note :<br>
+              <a href="https://fr.trustpilot.com/">Pour donner votre avis, c'est ici</a>
           </div>
           <br>
           <br>

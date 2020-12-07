@@ -10,30 +10,51 @@
     <b-container fluid >
       <b-row>
         <b-col class="right">
-          <b-card-title class="right">Place à votre EVJF / EVG !!<img id="popover-target-2" class="pointinfo mb-5" src="../../../public/PointinfoPINK.png" align="right">
+          <b-card-title class="right">Place à votre EVJF / EVG !!
           </b-card-title>
-          <div> C'est le moment de profiter de ses amis et d'enterrer sa vie de célibataire ! Pour ceux qui manquent d'idée, n'hésitez pas à vous adresser à des agences spécialisées.</div>
+          <div class="info"> C'est le moment de profiter de ses amis et d'enterrer sa vie de célibataire ! Pour ceux qui manquent d'idée, n'hésitez pas à vous adresser à des agences spécialisées.</div>
           <br>
           <br>
-          <b-card-title class="right">Réception des RSVP<img id="popover-target-3" class="pointinfo mb-5" src="../../../public/PointinfoPINK.png" align="right">
+          <b-card-title class="right">Réception des RSVP
           </b-card-title>
-          <div>
-            Illud tamen te esse admonitum volo, primum ut qualis es talem te esse omnes existiment ut, quantum a rerum turpitudine abes, tantum te a verborum libertate seiungas;
+          <div class="info">
+            La date approche et il est temps de savoir si tata Huguette sera présente et si votre copain Charles vient accompagné ou seul. Le traiteur, en particulier, a besoin de ces informations pour pouvoir prévoir la bonne quantité de nourriture. Relancez ceux qui ne vous ont pas répondu. Vous pouvez également leur proposer des sites de logements près de chez vous.<br>
+            <a href="https://www.airbnb.fr/">Comment se loger facilement</a>
           </div>
 
         </b-col>
         <b-col>
-          <b-card-title class="right">C'est le moment de passer à l'action ! Concrétisez votre décoration<img id="popover-target-4" class="pointinfo mb-5" src="../../../public/PointinfoPINK.png" align="right">
+          <b-card-title class="right">C'est le moment de passer à l'action ! Concrétisez votre décoration
           </b-card-title>
           <div class="info">
-            Illud tamen te esse admonitum volo, primum ut qualis es talem te esse omnes existiment ut, quantum a rerum turpitudine abes, tantum te a verborum libertate seiungas;
+            Elle doit être à votre goût et dans le thème de votre mariage.<br>
+            <a href="https://www.decorationsdemariage.fr/">Pour vous aider à tout trouver</a>
           </div>
           <br>
           <br>
-          <b-card-title class="right">Avez-vous pensé à vos plans de tables ?<img id="popover-target-5" class="pointinfo mb-5" src="../../../public/PointinfoPINK.png" align="right">
+          <b-card-title class="right">Avez-vous pensé à vos plans de tables ?<img id="popover-target-1" class="pointinfo mb-5" src="../../../public/PointinfoPINK.png" align="right">
           </b-card-title>
-          <div class="info">Illud tamen te esse admonitum volo, primum ut qualis es talem te esse omnes existiment ut, quantum a rerum turpitudine abes, tantum te a verborum libertate seiungas;
+          <div class="info">Vous pouvez prendre le parti de ne pas faire de plan de table du tout, mais si vous vous lancez, nous avons quelques conseils pour vous.
           </div>
+            <b-popover class="popover" target="popover-target-1" triggers="hover" placement="top">
+                <template #title>Quelques conseils pour vous aider</template>
+                <br>
+                <b>Placer les personnes par famille ou mixez les invités</b> <br>
+                Vous connaissez vos invités, à vous de voir ce qui sera le plus agréable pour tous. Si la famille est très éclatée aux 4 coins de la France, les regrouper leur fera surement plaisir, car ils n'ont pas beaucoup d'occasion de se voir.<br>
+                <br>
+                <b>Faire se rencontrer les inconnus</b><br>
+                 Les mariages sont l'occasion de belles rencontres. Basez vous sur les affinités de chacun et les groupes se dessineront plus facilement.<br>
+                <br>
+                <b>Aidez vous de post-its ou cartons</b>:
+                <br>
+                Pour mieux visualiser et vous organiser, utilisez des post-its ou des petits cartons qui vous permettront de changer les personnes de place facilement et d'avoir une bonne vue d'ensemble.<br>
+                <b>Faites une seule table pour tous les enfants, sans les placer</b>:
+                <br>
+                Ils vont bouger de toute façon. En les laissant libres, ils choisiront d'eux-même où se mettre en fonction des liens tissés avant le repas.<br>
+                <b>Ne jamais demander leur avis aux invités !</b>:
+                <br>
+                Vous ne pourrez jamais faire plaisir à tout le monde.
+            </b-popover>
           <br>
           <br>
           <div class="etapesuivante" align="center"> Je passe à l'étape suivante !<a href='/step6'><img  class="pointinfo" src="../../../public/right-arrow.png" align="right"></a></div>

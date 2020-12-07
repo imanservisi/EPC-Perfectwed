@@ -10,27 +10,44 @@
     <b-container fluid >
       <b-row>
         <b-col class="right">
-          <b-card-title class="right">Avez-vous contacté tous les professionnels ?<img id="popover-target-2" class="pointinfo mb-5" src="../../../public/PointinfoPINK.png" align="right">
+          <b-card-title class="right">Avez-vous contacté tous les professionnels ?
           </b-card-title>
-          <div> Confirmez la venue de tous vos partenaires, si il manque le traiteur, dépêchez-vous, plus la date du mariage s'approche, plus il est difficile de trouver des professionnels.</div>
+          <div class="info"> Confirmez la venue de tous vos partenaires, si il manque le traiteur, dépêchez-vous, plus la date du mariage s'approche, plus il est difficile de trouver des professionnels.</div>
           <br>
           <br>
           <b-card-title class="right">Avez-vous commencé les essayages ?<img id="popover-target-3" class="pointinfo mb-5" src="../../../public/PointinfoPINK.png" align="right">
           </b-card-title>
-          <div> Si ce n'est pas le cas, pensez à prendre rendez-vous pour essayer votre robe de mariée, et pour monsieur, son costume.</div>
-
+          <div class="info"> Si ce n'est pas le cas, pensez à prendre rendez-vous pour essayer votre robe de mariée, et pour monsieur, son costume.</div>
+            <b-popover class="popover" target="popover-target-3" triggers="hover" placement="top">
+                <template #title>Le saviez vous ?</template>
+                <div class="info">
+                <br>
+                <b>Le marié ne doit pas voir la robe avant</b> <br>
+                Cette tradition, souvent encore respectée de nos jours, veut que le marié ne découvre la robe de sa future épouse qu’une fois devant l’autel. Si le futur marié aperçoit sa femme en tenue avant la noce, le mauvais œil risquerait alors de s’abattre sur le couple.
+                <br>
+                <b>Les 4 éléments à porter le jour de son mariage</b><br>
+                Cette tradition qui nous vient des anglo-saxons veut que la mariée porte sur elle le jour des noces : quelque chose de bleu, quelque chose de vieux, quelque chose d’emprunté et quelque chose de neuf. Une fois encore selon la coutume : le bleu est un symbole de fidélité, le vieux est le symbole de la vie d’avant la noce, le neuf est celui de la vie future et l’objet emprunté porte bonheur.
+                <br>
+                <b>Le voile de la mariée</b>:
+                <br>
+                Autrefois, le futur époux ne découvrait sa promise qu’une fois devant l’autel. Afin de s’assurer que le physique n’intervienne pas dans la décision de mariage, cette dernière se présentait à lui le visage toujours voilé d’un tulle blanc.
+                </div>
+            </b-popover>
         </b-col>
         <b-col>
-          <b-card-title class="right">Faites un point administratif.<img id="popover-target-4" class="pointinfo mb-5" src="../../../public/PointinfoPINK.png" align="right">
+          <b-card-title class="right">Faites un point administratif.
           </b-card-title>
-          <div class="info"> C'est le moment de lister tout ce qui a déjà été fait. Renvoyez les papiers manquants, les demandes de devis...</div>
+          <div class="info"> C'est le moment de lister tout ce qui a déjà été fait. Renvoyez les papiers manquants, les demandes de devis...<br>
+          <a href="https://www.service-public.fr/particuliers/vosdroits/F930"></a></div>
           <br>
           <br>
-          <b-card-title class="right">Commencez votre liste de mariage !<img id="popover-target-5" class="pointinfo mb-5" src="../../../public/PointinfoPINK.png" align="right">
+          <b-card-title class="right">Commencez votre liste de mariage !
           </b-card-title>
           <div class="info">  La liste de mariage est une tradition qui consiste à permettre aux invités de participer
             <br>
-            à la fondation du foyer des époux. De nombreux site internet peuvent vous aider à la faire.</div>
+            à la fondation du foyer des époux. De nombreux site internet peuvent vous aider à la faire.<br>
+            <a href="https://www.milirose.com/liste-de-mariage.html">Pour faire votre liste de mariage</a>
+          </div>
           <br>
           <br>
           <div class="etapesuivante" align="center"> Je passe à l'étape suivante !<a href='/step5'><img  class="pointinfo" src="../../../public/right-arrow.png" align="right"></a></div>

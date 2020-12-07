@@ -32,17 +32,11 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 Route::resource('/users', 'App\Http\Controllers\UserController');
 Route::resource('/wedboards', 'App\Http\Controllers\ProjectController');
 
-//Calculateur de frais
-Route::get('/calculator', function () {
-    return view('calculator');
-});
-Route::post('calculation', [App\Http\Controllers\CalculatorController::class, 'index']);
-
 Route::get('/app', function () {
     return Inertia\Inertia::render('App');
 })->name('app');
 
-Route::get('/board', function () {
+Route::middleware(['auth:sanctum', 'verified'])->get('/board', function () {
     return Inertia\Inertia::render('Board');
 })->name('board');
 

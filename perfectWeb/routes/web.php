@@ -16,9 +16,13 @@ use App\Http\Controllers\CalculatorController;
 |
 */
 
-Route::get('/', function () {
+// Route::get('/', function () {
+//     return Inertia\Inertia::render('accueil');
+// })->name('welcome');
+
+Route::get('/', function(){
     return view('welcome');
-});
+})->name('welcome');
 
 Route::get('/admin', function(){
     return view('admin');

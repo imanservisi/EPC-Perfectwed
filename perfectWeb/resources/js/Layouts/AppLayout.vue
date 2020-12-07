@@ -7,15 +7,20 @@
                     <div class="flex">
                         <!-- Logo -->
                         <div class="flex-shrink-0 flex items-center">
-                            <inertia-link :href="route('dashboard')">
+                            <inertia-link :href="route('welcome')">
                                 <jet-application-mark class="block h-9 w-auto" />
                             </inertia-link>
                         </div>
 
                         <!-- Navigation Links -->
                         <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                            <jet-nav-link :href="route('dashboard')" :active="route().current('dashboard')">
-                                Accueil
+                            <jet-nav-link :href="route('board')" :active="route().current('board')">
+                                Board
+                            </jet-nav-link>
+                        </div>
+                          <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                            <jet-nav-link :href="route('step1')" :active="route().current('step1')">
+                                Guide
                             </jet-nav-link>
                         </div>
                     </div>
@@ -148,7 +153,7 @@
                         <!-- Authentication -->
                         <form method="POST" @submit.prevent="logout">
                             <jet-responsive-nav-link as="button">
-                                Déconnexion
+                                Se déconnecter
                             </jet-responsive-nav-link>
                         </form>
 

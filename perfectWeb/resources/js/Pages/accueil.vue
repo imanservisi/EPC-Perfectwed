@@ -1,5 +1,4 @@
 <template>
- <app-layout>
   <div class="backgroundperfectwedding">
     <br>
     <div class="concept">Imaginez et realisez le plus beau jour de votre vie</div>
@@ -45,14 +44,11 @@
     <b-button class="button" > COMMENCER !</b-button>
    <!--<img src="../../../public/weddingultimate.jpg" height="2435" width="5171"/>-->
   </div>
-   </app-layout>
 </template>
 
 <script>
- import AppLayout from '@/Layouts/AppLayout'
 
 export default {
-    components: {AppLayout},
   name: 'welcome',
   props: {
     msg: String

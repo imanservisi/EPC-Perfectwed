@@ -13,20 +13,17 @@
                 </div>
             </div>
         </div>
-    <google-map />
     </app-layout>
 </template>
 
 <script>
     import AppLayout from '@/Layouts/AppLayout'
     import Welcome from '@/Jetstream/Welcome'
-    import GoogleMap from "./Google/GoogleMap"
 
     export default {
         components: {
             AppLayout,
-            Welcome,
-            GoogleMap
+            Welcome
         },
     }
 </script>

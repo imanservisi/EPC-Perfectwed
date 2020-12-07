@@ -25,14 +25,14 @@
         <b-col>
           <b-card-title class="right">C'est le moment de passer à l'action ! Concrétisez votre décoration<img id="popover-target-4" class="pointinfo mb-5" src="../../../public/PointinfoPINK.png" align="right">
           </b-card-title>
-          <div>
+          <div class="info">
             Illud tamen te esse admonitum volo, primum ut qualis es talem te esse omnes existiment ut, quantum a rerum turpitudine abes, tantum te a verborum libertate seiungas;
           </div>
           <br>
           <br>
           <b-card-title class="right">Avez-vous pensé à vos plans de tables ?<img id="popover-target-5" class="pointinfo mb-5" src="../../../public/PointinfoPINK.png" align="right">
           </b-card-title>
-          <div>Illud tamen te esse admonitum volo, primum ut qualis es talem te esse omnes existiment ut, quantum a rerum turpitudine abes, tantum te a verborum libertate seiungas;
+          <div class="info">Illud tamen te esse admonitum volo, primum ut qualis es talem te esse omnes existiment ut, quantum a rerum turpitudine abes, tantum te a verborum libertate seiungas;
           </div>
           <br>
           <br>
@@ -59,6 +59,9 @@ window.parent.document.title = 'Étape 5'
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital@1&display=swap');
+
 .backgroundaboutwedding {
   background-image: url("../../../public/cheers.jpg");
   background-size: cover;
@@ -70,18 +73,23 @@ window.parent.document.title = 'Étape 5'
 }
 
 .explication {
-  transition-delay : 0.5s;
-  transition-property: right, opacity;
-  transition-duration: 2s;
-  line-height: 1.5rem;
-  text-align: center;
-  font-family: "Libian SC", sans-serif;
-  font-size:1.5rem;
-  color: #776D5A;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
+    transition-delay : 0.5s;
+    transition-property: right, opacity;
+    transition-duration: 2s;
+    line-height: 2.5rem;
+    text-align: center;
+    font-family: 'Sansita Swashed', sans-serif;
+    font-size:1.3rem;
+    color: #776D5A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.info {
+    font-family: 'Raleway', sans-serif;
+    font-size:1rem;
 }
 
 #decl:hover, nav:hover {
@@ -96,6 +104,12 @@ window.parent.document.title = 'Étape 5'
   margin-right: auto;
   height: 100px;
 }
+
+.right {
+    font-family: 'Raleway', sans-serif;
+    font-size:1.7rem;
+}
+
 .center{
   align-content: center;
   align-items: center;
@@ -117,8 +131,8 @@ window.parent.document.title = 'Étape 5'
 }
 
 .etapesuivante {
-  font-family: "Libian SC", sans-serif;
-  font-size: 2rem;
-  color: #776D5A;
+    font-family: 'Sansita Swashed', sans-serif;
+    font-size: 2rem;
+    color: #776D5A;
 }
 </style>

@@ -10,74 +10,45 @@
     <b-container fluid >
       <b-row>
         <b-col class="right">
-          <b-card-title>Trouvez l'inspiration </b-card-title>
+          <b-card-title class="info"><U>Trouvez l'inspiration :</U></b-card-title>
           <a data-pin-do="embedBoard" data-pin-lang="fr" data-pin-board-width="400" data-pin-scale-height="240" data-pin-scale-width="80" href="https://www.pinterest.fr/cotemaison/d%25C3%25A9co-mariage/"></a>
         </b-col>
         <b-col>
-          <b-card-title>Choisissez le lieu du mariage <img id="popover-target-2" class="pointinfo mb-5" src="../../../public/PointinfoPINK.png" align="right">
+          <b-card-title class="info"><U>Choisissez le lieu du mariage :</U>
           </b-card-title>
           <br>
-          <div>Une fois prise la décision de se marier, le plus important est de fixer le lieu du mariage. Aujourd'hui le plus courant est de célébrer le mariage civil à la mairie et le mariage religieux dans une eglise.</div>
+          <div class="info">Une fois prise la décision de se marier, le plus important est de fixer le lieu du mariage. Aujourd'hui le plus courant est de célébrer le mariage civil à la mairie et le mariage religieux dans un lieu de culte.</div>
+          <div class="info"><a href="https://www.1001salles.com/">Pour trouver une salle</a></div>
           <br>
           <br>
-          <b-card-title>Choix des témoins
+          <b-card-title class="info"><U>Choix des témoins :</U>
             <img id="popover-target-1" class="pointinfo mb-5" src="../../../public/PointinfoPINK.png" align="right">
           </b-card-title>
           <br>
-          <div> Au cours des préparatifs de votre mariage vous allez être confrontée à de nombreux choix pour la suite des événements. Choisir la bonne personne comme témoin fait partie de ces dilemmes.</div>
+          <div class="info"> Au cours des préparatifs de votre mariage vous allez être confrontée à de nombreux choix pour la suite des événements. Choisir la bonne personne comme témoin fait partie de ces dilemmes.</div>
           <b-popover target="popover-target-1" triggers="hover" placement="top">
-            <template #title>Quels sont les différents types de cérémonies ?</template>
-            Les types de cérémonies de mariage sont désormais diversifiés. <br>
-            Les couples qui souhaitent se marier se demandent quelle option choisir pour la célébration de leur mariage.<br>
-            Découvrons chacun les différents types de cérémonies pour vous aider à choisir.<br>
-            <b>La cérémonie civile :</b> <br>
-            Cette cérémonie est la première étape que franchit les mariées afin d’établir leur union.
-            Habituellement, les couples passent par le mariage civil avant d’aller à l’église pour la cérémonie,
-            que ce soit le même jour ou des jours différents.
-            La cérémonie civile est la seule qui a de la valeur aux yeux de l’Etat,
-            c’est la seule qui permettra de se marier officiellement.
-            Elle a lieu dans le bureau de la mairie et la célébration est dirigée par des fonctionnaires de l’Etat.
+            <template #title>Quels est le rôle des témoins ?</template>
+            <div class="info">Un témoin est un ami proche ou quelqu'un de votre famille, à qui l'on demande d'être à ses côtés pour le mariage. Il peut y en avoir 2 par marié pour la mairie et 4 pour l'église.<br>
+            Son rôle est de témoigner de l'amour entre les époux. Il signe les registres (mairie, lieu de culte) au moment de la célébration.<br>
+            <b>Une aide aussi dans les préparatifs</b> <br>
+            Proche de vous, vous pouvez également le solliciter pour vous aider sur certaines tâches (goûter le champagne, préparer les faire-parts...).
             <br>
-            <b>La cérémonie religieuse : </b><br>
-            C’est la cérémonie qui est conforme à la religion et aux croyances des mariés.
-            La majorité des couples qui passent par la cérémonie religieuse,
-            sont des couples qui appartiennent à une communauté religieuse.
-            Cette cérémonie est réalisée pour faire reconnaître le mariage devant Dieu et aussi pour recevoir
-            la bénédiction de Dieu pendant la vie du couple.
-            Il y a des rituels que ce concept doit suivre pendant la cérémonie.
-            Ce sont les dignitaires religieux qui doivent diriger la cérémonie.
+            <b>L'organisation de l'enterrement de vie des jeunes mariés</b><br>
+            Traditionnellement, c'est au témoin de l'organiser. A vous de donner aux différentes personnes les coordonnées de tout le monde aussi. Par contre, n'hésitez pas à leur dire ce que vous n'aimeriez pas du tout faire, histoire d'éviter un flop.
             <br>
-            <b>La cérémonie laïque </b>:
+            <b>Un support le Jour J</b>:
             <br>
-            Cette cérémonie n’est ni civile ni religieuse.
-            C’est seulement une manière symbolique de célébrer l’amour sans passer par l’église.
-            Ce sont les couples non croyants qui choisissent cette option.
-            C’est un moment plus émouvant et romantique où les deux partenaires partagent leur histoire d’amour.
-            Il n’y a pas de rituel obligatoire, mais la future mariée et le futur marié choisissent d’eux-mêmes
-            comment ils vont procéder à la célébration de leur mariage. Ils peuvent y ajouter une touche de personnalisation
-            qui leur convient.
-          </b-popover>
-          <b-popover target="popover-target-2" triggers="hover" placement="top">
-            <template #title>Quels sont les différents types de cérémonies ?</template>
-            Les types de cérémonies de mariage sont désormais diversifiés. <br>
-            Les couples qui souhaitent se marier se demandent quelle option choisir pour la célébration de leur mariage.<br>
-            Découvrons chacun les différents types de cérémonies pour vous aider à choisir.<br>
-            <b>La cérémonie civile :</b> <br>
-            Cette cérémonie est la première étape que franchit les mariées afin d’établir leur union.
-            Habituellement, les couples passent par le mariage civil avant d’aller à l’église pour la cérémonie,
-            que ce soit le même jour ou des jours différents.
-            La cérémonie civile est la seule qui a de la valeur aux yeux de l’Etat,
-            c’est la seule qui permettra de se marier officiellement.
-            Elle a lieu dans le bureau de la mairie et la célébration est dirigée par des fonctionnaires de l’Etat.
+            Support psychologique (mais oui, vous êtes magnifiques !!) et logistique durant toute cette journée, votre témoin sera toujours là pour vous aider qu'une hécatombe arrive le Jour J. Attention, par contre, ce n'est pas lui qui organise votre mariage, donc ne lui en demandez pas trop non plus.
+            </div>
           </b-popover>
         </b-col>
         <b-col>
-          <b-card-title> Envoyez vos faire-part
-            <img id="popover-target-3" class="pointinfo" src="../../../public/PointinfoPINK.png" align="right">
+          <b-card-title class="info"><U>Envoyez vos faire-part :</U>
           </b-card-title>
           <br>
-          <div>Etape clé dans l’organisation de votre mariage, le fameux faire-part sera non seulement la première annonce de votre heureux événement mais permettra également de donner le ton de votre joli jour !</div>
-          <br>
+          <div class="info">Etape clé dans l’organisation de votre mariage, le fameux faire-part sera non seulement la première annonce de votre heureux événement mais permettra également de donner le ton de votre joli jour !</div>
+          <div class="info"><a href="https://www.monfairepart.com/faire-part-mariage.html">Pour réaliser de beaux faire-parts</a></div>
+            <br>
           <br>
           <br>
           <br>
@@ -106,6 +77,9 @@ window.parent.document.title = 'Étape 2'
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital@1&display=swap');
+
 .backgroundaboutwedding {
   background-image: url("../../../public/cheers.jpg");
   background-size: cover;
@@ -116,14 +90,19 @@ window.parent.document.title = 'Étape 2'
 
 }
 
+.info {
+    font-family: 'Raleway', sans-serif;
+    font-size:1rem;
+}
+
 .explication {
   transition-delay : 0.5s;
   transition-property: right, opacity;
   transition-duration: 2s;
-  line-height: 1.5rem;
+  line-height: 2.5rem;
   text-align: center;
-  font-family: "Libian SC", sans-serif;
-  font-size:1.5rem;
+  font-family: 'Sansita Swashed', sans-serif;
+  font-size:1.3rem;
   color: #776D5A;
   display: flex;
   justify-content: center;
@@ -164,7 +143,7 @@ window.parent.document.title = 'Étape 2'
 }
 
 .etapesuivante {
-  font-family: "Libian SC", sans-serif;
+  font-family: 'Sansita Swashed', sans-serif;
   font-size: 2rem;
   color: #776D5A;
 }

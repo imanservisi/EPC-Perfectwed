@@ -1,6 +1,6 @@
 <template>
   <app-layout>
-  <div >
+  <div @click="stop">
     <div class="explication" v-on:mouseover="start">
       C'est le jour J : Félicitations !!!
     </div>
@@ -9,19 +9,14 @@
     <b-container fluid >
       <b-row>
         <b-col>
-          <b-card-title class="right">Des commentaires, des retours ? N'hésitez pas à nous dire ce que vous avez pensé de cet accompagnement.<img id="popover-target-4" class="pointinfo mb-5" src="../../../public/PointinfoPINK.png" align="right">
+          <b-card-title class="right">
           </b-card-title>
-          <div>
-            Illud tamen te esse admonitum volo, primum ut qualis es talem te esse omnes existiment ut, quantum a rerum turpitudine abes, tantum te a verborum libertate seiungas;
+          <div class="explication">
+             Amusez vous et profitez de cette journée d'exception !!
           </div>
           <br>
           <br>
-          <b-card-title class="right">Proposez à vos invités de partager avec vous leurs photos<img id="popover-target-5" class="pointinfo mb-5" src="../../../public/PointinfoPINK.png" align="right">
-          </b-card-title>
-          <div>Illud tamen te esse admonitum volo, primum ut qualis es talem te esse omnes existiment ut, quantum a rerum turpitudine abes, tantum te a verborum libertate seiungas;
-          </div>
-          <br>
-          <br>
+
           <div class="etapesuivante" align="center"> Je passe à l'étape suivante !<a href='/step9'><img  class="pointinfo" src="../../../public/right-arrow.png" align="right"></a></div>
         </b-col>
       </b-row>
@@ -52,6 +47,9 @@ export default {
   methods: {
     start () {
       this.$confetti.start()
+    },
+    stop () {
+        this.$confetti.stop()
     }
   }
 }
@@ -60,66 +58,81 @@ window.parent.document.title = 'Étape 8'
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital@1&display=swap');
+
 .backgroundaboutwedding {
-  background-image: url("../../../public/cheers.jpg");
-  background-size: cover;
-  margin: 0 auto 0 auto;
-  min-height: 100vh;
-  min-width: 20vw;
-  display: block;
+    background-image: url("../../../public/cheers.jpg");
+    background-size: cover;
+    margin: 0 auto 0 auto;
+    min-height: 100vh;
+    min-width: 20vw;
+    display: block;
 
 }
 
 .explication {
-  transition-delay : 0.5s;
-  transition-property: right, opacity;
-  transition-duration: 2s;
-  line-height: 1.5rem;
-  text-align: center;
-  font-family: "Libian SC", sans-serif;
-  font-size:1.5rem;
-  color: #776D5A;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
+    transition-delay : 0.5s;
+    transition-property: right, opacity;
+    transition-duration: 2s;
+    line-height: 2.5rem;
+    text-align: center;
+    font-family: 'Sansita Swashed', sans-serif;
+    font-size:1.3rem;
+    color: #776D5A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.info {
+    font-family: 'Raleway', sans-serif;
+    font-size:1rem;
 }
 
 #decl:hover, nav:hover {
-  right: 25em;
-  opacity:1;
+    right: 25em;
+    opacity:1;
 }
 
 .centerimg {
-  display: flex;
-  justify-items: center;
-  margin-left: auto;
-  margin-right: auto;
-  height: 100px;
+    display: flex;
+    justify-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100px;
 }
 .center{
-  align-content: center;
-  align-items: center;
-  text-align: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size:1.7rem;
+}
+
+.right {
+    font-family: 'Raleway', sans-serif;
+    font-size:1.7rem;
 }
 
 .pointinfo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  height: 60px;
-  width: 60px;
-  max-width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    height: 60px;
+    width: 60px;
+    max-width: 800px;
 
 }
 .popover {
-  max-width: 800px;
+    max-width: 800px;
 }
 
 .etapesuivante {
-  font-family: "Libian SC", sans-serif;
-  font-size: 2rem;
-  color: #776D5A;
+    font-family: 'Sansita Swashed', sans-serif;
+    font-size: 2rem;
+    color: #776D5A;
 }
 </style>

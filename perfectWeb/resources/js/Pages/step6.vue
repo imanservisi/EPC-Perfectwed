@@ -12,14 +12,14 @@
         <b-col>
           <b-card-title class="right">Posez vos congés !<img id="popover-target-4" class="pointinfo mb-5" src="../../../public/PointinfoPINK.png" align="right">
           </b-card-title>
-          <div>
+          <div class="info">
             Illud tamen te esse admonitum volo, primum ut qualis es talem te esse omnes existiment ut, quantum a rerum turpitudine abes, tantum te a verborum libertate seiungas;
           </div>
           <br>
           <br>
           <b-card-title class="right">N'hésitez pas à recontacter tous les acteurs nécessaires à la réalisation de votre mariage !<img id="popover-target-5" class="pointinfo mb-5" src="../../../public/PointinfoPINK.png" align="right">
           </b-card-title>
-          <div>Illud tamen te esse admonitum volo, primum ut qualis es talem te esse omnes existiment ut, quantum a rerum turpitudine abes, tantum te a verborum libertate seiungas;
+          <div class="info">Illud tamen te esse admonitum volo, primum ut qualis es talem te esse omnes existiment ut, quantum a rerum turpitudine abes, tantum te a verborum libertate seiungas;
           </div>
           <br>
           <br>
@@ -52,6 +52,9 @@ startConfetti()
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital@1&display=swap');
+
 .backgroundaboutwedding {
   background-image: url("../../../public/cheers.jpg");
   background-size: cover;
@@ -63,23 +66,28 @@ startConfetti()
 }
 
 .explication {
-  transition-delay : 0.5s;
-  transition-property: right, opacity;
-  transition-duration: 2s;
-  line-height: 1.5rem;
-  text-align: center;
-  font-family: "Libian SC", sans-serif;
-  font-size:1.5rem;
-  color: #776D5A;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
+    transition-delay : 0.5s;
+    transition-property: right, opacity;
+    transition-duration: 2s;
+    line-height: 2.5rem;
+    text-align: center;
+    font-family: 'Sansita Swashed', sans-serif;
+    font-size:1.3rem;
+    color: #776D5A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
 }
 
 #decl:hover, nav:hover {
   right: 25em;
   opacity:1;
+}
+
+.info {
+    font-family: 'Raleway', sans-serif;
+    font-size:1rem;
 }
 
 .centerimg {
@@ -93,6 +101,11 @@ startConfetti()
   align-content: center;
   align-items: center;
   text-align: center;
+}
+
+.right {
+    font-family: 'Raleway', sans-serif;
+    font-size:1.7rem;
 }
 
 .pointinfo {
@@ -110,8 +123,8 @@ startConfetti()
 }
 
 .etapesuivante {
-  font-family: "Libian SC", sans-serif;
-  font-size: 2rem;
-  color: #776D5A;
+    font-family: 'Sansita Swashed', sans-serif;
+    font-size: 2rem;
+    color: #776D5A;
 }
 </style>

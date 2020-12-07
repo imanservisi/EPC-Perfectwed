@@ -12,14 +12,14 @@
         <b-col class="right">
           <b-card-title class="right">Quel temps fera t-il pour mon mariage ?<img id="popover-target-2" class="pointinfo mb-5" src="../../../public/PointinfoPINK.png" align="right">
           </b-card-title>
-          <div>
+          <div class="info">
             Illud tamen te esse admonitum volo, primum ut qualis es talem te esse omnes existiment ut, quantum a rerum turpitudine abes, tantum te a verborum libertate seiungas;
           </div>
           <br>
           <br>
           <b-card-title class="right">Avez-vous prévu une répétition ?<img id="popover-target-3" class="pointinfo mb-5" src="../../../public/PointinfoPINK.png" align="right">
           </b-card-title>
-          <div>
+          <div class="info">
             Illud tamen te esse admonitum volo, primum ut qualis es talem te esse omnes existiment ut, quantum a rerum turpitudine abes, tantum te a verborum libertate seiungas;
           </div>
 
@@ -27,14 +27,14 @@
         <b-col>
           <b-card-title class="right">Dernières retouches<img id="popover-target-4" class="pointinfo mb-5" src="../../../public/PointinfoPINK.png" align="right">
           </b-card-title>
-          <div>
+          <div class="info">
             Illud tamen te esse admonitum volo, primum ut qualis es talem te esse omnes existiment ut, quantum a rerum turpitudine abes, tantum te a verborum libertate seiungas;
           </div>
           <br>
           <br>
           <b-card-title class="right">Planification/Définition des tâches de chacun<img id="popover-target-5" class="pointinfo mb-5" src="../../../public/PointinfoPINK.png" align="right">
           </b-card-title>
-          <div>
+          <div class="info">
             Illud tamen te esse admonitum volo, primum ut qualis es talem te esse omnes existiment ut, quantum a rerum turpitudine abes, tantum te a verborum libertate seiungas;
           </div>
           <br>
@@ -62,6 +62,9 @@ window.parent.document.title = 'Étape 7'
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital@1&display=swap');
+
 .backgroundaboutwedding {
   background-image: url("../../../public/cheers.jpg");
   background-size: cover;
@@ -73,19 +76,25 @@ window.parent.document.title = 'Étape 7'
 }
 
 .explication {
-  transition-delay : 0.5s;
-  transition-property: right, opacity;
-  transition-duration: 2s;
-  line-height: 1.5rem;
-  text-align: center;
-  font-family: "Libian SC", sans-serif;
-  font-size:1.5rem;
-  color: #776D5A;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
+    transition-delay : 0.5s;
+    transition-property: right, opacity;
+    transition-duration: 2s;
+    line-height: 2.5rem;
+    text-align: center;
+    font-family: 'Sansita Swashed', sans-serif;
+    font-size:1.3rem;
+    color: #776D5A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
 }
+
+.info {
+    font-family: 'Raleway', sans-serif;
+    font-size:1rem;
+}
+
 
 #decl:hover, nav:hover {
   right: 25em;
@@ -105,6 +114,11 @@ window.parent.document.title = 'Étape 7'
   text-align: center;
 }
 
+.right {
+    font-family: 'Raleway', sans-serif;
+    font-size:1.7rem;
+}
+
 .pointinfo {
   display: flex;
   justify-content: center;
@@ -120,8 +134,8 @@ window.parent.document.title = 'Étape 7'
 }
 
 .etapesuivante {
-  font-family: "Libian SC", sans-serif;
-  font-size: 2rem;
-  color: #776D5A;
+    font-family: 'Sansita Swashed', sans-serif;
+    font-size: 2rem;
+    color: #776D5A;
 }
 </style>

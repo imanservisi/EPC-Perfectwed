@@ -47,11 +47,12 @@
 
         <b-popover class="popover" target="popover-target-1" triggers="hover" placement="top">
           <template #title>Quels sont les différents types de cérémonies ?</template>
+            <div class="info">
           Les types de cérémonies de mariage sont désormais diversifiés. <br>
           Les couples qui souhaitent se marier se demandent quelle option choisir pour la célébration de leur mariage.<br>
-          Découvrons chacun les différents types de cérémonies pour vous aider à choisir.<br>
+          Voici les différents types de cérémonies pour vous aider à choisir.<br>
           <b>La cérémonie civile :</b> <br>
-          Cette cérémonie est la première étape que franchit les mariées afin d’établir leur union.
+          Cette cérémonie est la première étape que franchissent les mariés afin d’établir leur union.
           Habituellement, les couples passent par le mariage civil avant d’aller à l’église pour la cérémonie,
           que ce soit le même jour ou des jours différents.
           La cérémonie civile est la seule qui a de la valeur aux yeux de l’Etat,
@@ -72,10 +73,11 @@
           Cette cérémonie n’est ni civile ni religieuse.
           C’est seulement une manière symbolique de célébrer l’amour sans passer par l’église.
           Ce sont les couples non croyants qui choisissent cette option.
-          C’est un moment plus émouvant et romantique où les deux partenaires partagent leur histoire d’amour.
-          Il n’y a pas de rituel obligatoire, mais la future mariée et le futur marié choisissent d’eux-mêmes
+          C’est un moment plus émouvant et romantique que la cérémonie civile, où les deux partenaires partagent leur histoire d’amour.
+          Il n’y a pas de rituel obligatoire, mais les futurs mariés choisissent eux-mêmes
           comment ils vont procéder à la célébration de leur mariage. Ils peuvent y ajouter une touche de personnalisation
           qui leur convient.
+            </div>
         </b-popover>
       </b-col>
       <b-col>
@@ -194,6 +196,8 @@ window.parent.document.title = 'Étape 1'
 }
 .popover {
   max-width: 800px;
+    font-family: 'Raleway', sans-serif;
+    font-size:1.7rem;
 }
 
 .etapesuivante {

@@ -23,12 +23,12 @@
         <b-col>
           <b-card-title class="right">Faites un point administratif.<img id="popover-target-4" class="pointinfo mb-5" src="../../../public/PointinfoPINK.png" align="right">
           </b-card-title>
-          <div> C'est le moment de lister tous ce qui a déjà été fait. Renvoyez les papiers manquants, les demandes de devis...</div>
+          <div class="info"> C'est le moment de lister tout ce qui a déjà été fait. Renvoyez les papiers manquants, les demandes de devis...</div>
           <br>
           <br>
           <b-card-title class="right">Commencez votre liste de mariage !<img id="popover-target-5" class="pointinfo mb-5" src="../../../public/PointinfoPINK.png" align="right">
           </b-card-title>
-          <div>  La liste de mariage est une tradition qui consiste à permettre aux invités de participer
+          <div class="info">  La liste de mariage est une tradition qui consiste à permettre aux invités de participer
             <br>
             à la fondation du foyer des époux. De nombreux site internet peuvent vous aider à la faire.</div>
           <br>
@@ -56,6 +56,9 @@ window.parent.document.title = 'Étape 4'
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital@1&display=swap');
+
 .backgroundaboutwedding {
   background-image: url("../../../public/cheers.jpg");
   background-size: cover;
@@ -67,18 +70,23 @@ window.parent.document.title = 'Étape 4'
 }
 
 .explication {
-  transition-delay : 0.5s;
-  transition-property: right, opacity;
-  transition-duration: 2s;
-  line-height: 1.5rem;
-  text-align: center;
-  font-family: "Libian SC", sans-serif;
-  font-size:1.5rem;
-  color: #776D5A;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
+    transition-delay : 0.5s;
+    transition-property: right, opacity;
+    transition-duration: 2s;
+    line-height: 2.5rem;
+    text-align: center;
+    font-family: 'Sansita Swashed', sans-serif;
+    font-size:1.3rem;
+    color: #776D5A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.info {
+    font-family: 'Raleway', sans-serif;
+    font-size:1rem;
 }
 
 #decl:hover, nav:hover {
@@ -97,6 +105,14 @@ window.parent.document.title = 'Étape 4'
   align-content: center;
   align-items: center;
   text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size:1.7rem;
+}
+
+.right {
+    font-family: 'Raleway', sans-serif;
+    font-size:1.3rem;
+    line-height: 2rem;
 }
 
 .pointinfo {
@@ -114,8 +130,8 @@ window.parent.document.title = 'Étape 4'
 }
 
 .etapesuivante {
-  font-family: "Libian SC", sans-serif;
-  font-size: 2rem;
-  color: #776D5A;
+    font-family: 'Sansita Swashed', sans-serif;
+    font-size: 2rem;
+    color: #776D5A;
 }
 </style>

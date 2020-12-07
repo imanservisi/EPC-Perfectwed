@@ -11,7 +11,7 @@
         <b-col>
           <b-card-title class="right">Remerciez tous vos partenaires, amis et famille.<img id="popover-target-4" class="pointinfo mb-5" src="../../../public/PointinfoPINK.png" align="right">
           </b-card-title>
-          <div>
+          <div class="info">
             Illud tamen te esse admonitum volo, primum ut qualis es talem te esse omnes existiment ut, quantum a rerum turpitudine abes, tantum te a verborum libertate seiungas;
           </div>
           <br>
@@ -30,6 +30,7 @@
   </div>
     </app-layout>
 </template>
+
 <script>
   import AppLayout from '@/Layouts/AppLayout'
 
@@ -43,8 +44,11 @@ window.parent.document.title = 'Étape 9'
 
 </script>
 
-  <style scoped>
-    .backgroundaboutwedding {
+<style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital@1&display=swap');
+
+  .backgroundaboutwedding {
       background-image: url("../../../public/cheers.jpg");
       background-size: cover;
       margin: 0 auto 0 auto;
@@ -52,42 +56,54 @@ window.parent.document.title = 'Étape 9'
       min-width: 20vw;
       display: block;
 
-    }
+  }
 
-    .explication {
+  .explication {
       transition-delay : 0.5s;
       transition-property: right, opacity;
       transition-duration: 2s;
-      line-height: 1.5rem;
+      line-height: 2.5rem;
       text-align: center;
-      font-family: "Libian SC", sans-serif;
-      font-size:1.5rem;
+      font-family: 'Sansita Swashed', sans-serif;
+      font-size:1.3rem;
       color: #776D5A;
       display: flex;
       justify-content: center;
       align-items: center;
       margin: 0 auto;
-    }
+  }
 
-    #decl:hover, nav:hover {
+  .info {
+      font-family: 'Raleway', sans-serif;
+      font-size:1rem;
+  }
+
+  #decl:hover, nav:hover {
       right: 25em;
       opacity:1;
-    }
+  }
 
-    .centerimg {
+  .centerimg {
       display: flex;
       justify-items: center;
       margin-left: auto;
       margin-right: auto;
       height: 100px;
-    }
-    .center{
+  }
+  .center{
       align-content: center;
       align-items: center;
       text-align: center;
-    }
+      font-family: 'Raleway', sans-serif;
+      font-size:1.7rem;
+  }
 
-    .pointinfo {
+  .right {
+      font-family: 'Raleway', sans-serif;
+      font-size:1.7rem;
+  }
+
+  .pointinfo {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -96,88 +112,17 @@ window.parent.document.title = 'Étape 9'
       width: 60px;
       max-width: 800px;
 
-    }
-    .popover {
+  }
+  .popover {
       max-width: 800px;
-    }
+  }
 
-    .etapesuivante {
-      font-family: "Libian SC", sans-serif;
+  .etapesuivante {
+      font-family: 'Sansita Swashed', sans-serif;
       font-size: 2rem;
       color: #776D5A;
-    }
+  }
   </style>
 
 <script>
 
-export default {
-  name: 'step1'
-}
-window.parent.document.title = 'Étape 9'
-
-</script>
-
-<style scoped>
-.backgroundaboutwedding {
-  background-image: url("../../../public/cheers.jpg");
-  background-size: cover;
-  margin: 0 auto 0 auto;
-  min-height: 100vh;
-  min-width: 20vw;
-  display: block;
-
-}
-
-.explication {
-  transition-delay : 0.5s;
-  transition-property: right, opacity;
-  transition-duration: 2s;
-  line-height: 1.5rem;
-  text-align: center;
-  font-family: "Libian SC", sans-serif;
-  font-size:1.5rem;
-  color: #776D5A;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-}
-
-#decl:hover, nav:hover {
-  right: 25em;
-  opacity:1;
-}
-
-.centerimg {
-  display: flex;
-  justify-items: center;
-  margin-left: auto;
-  margin-right: auto;
-  height: 100px;
-}
-.center{
-  align-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.pointinfo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  height: 60px;
-  width: 60px;
-  max-width: 800px;
-
-}
-.popover {
-  max-width: 800px;
-}
-
-.etapesuivante {
-  font-family: "Libian SC", sans-serif;
-  font-size: 2rem;
-  color: #776D5A;
-}
-</style>

@@ -3,34 +3,49 @@
 <div>
   <br>
   <div class="explication" >
-    Bravo ! Vous souhaitez réaliser vous-même votre plus beau rêve. Il est temps de commencer à planifier votre mariage... C’est le
+    Vous souhaitez réaliser vous-même votre plus beau rêve. Bravo ! Il est temps de commencer à planifier votre mariage... C’est le
     <br>
-    moment d’indiquer les premières informations nécessaires à sa réalisation. Vous n’êtes pas sur de certaines informations ?
+    moment d’indiquer les premières informations nécessaires à sa réalisation. Vous n’êtes pas sûrs de certaines informations ?
     <br>
-    Ce n’est pas grave ! Vous pourrez les modifier plus tard dans l’onglet ‘récapitulatif’.
+    Ce n’est pas grave ! Vous pourrez les modifier plus tard dans votre tableau de bord.
   </div>
 <br>
   <br>
+
   <b-container fluid >
     <b-row>
+        <!--
       <b-col class="center"> <b-calendar label-help="" label-no-date-selected="Choisissez la date de votre mariage"></b-calendar>
       </b-col>
+      -->
       <b-col>
-        <div>Lieu</div>
+        <div class="info"><U>Lieu :</U></div>
         <br>
+          <p class="info">Pour le mariage civil, quelques choix s'offrent à vous. La règle est simple :<br>
+              le mariage est célébré dans une commune avec laquelle au moins l'un des<br>
+              deux époux a des liens durables, de façon directe ou indirecte (c'est-à-dire<br>
+              via un parent). A vous ensuite de justifier de ces liens.</p>
+          <!--
         <b-form-input
           id="inline-form-input-name" class="mb-2 mr-sm-2 mb-sm-0" placeholder="Quel est le lieu de votre mariage ?"
         ></b-form-input>
+        -->
         <br> <br>
-        Nombre d'invités
+        <div class="info"><U>Nombre d'invités :</U></div>
         <br>
+          <p class="info">A vous de choisir, mais fixez vous des limites, car le budget peut vite monter !<br>
+          Une solution pour limiter les frais peut être de faire un vin d'honneur avec<br>
+          beaucoup d'invités et de ne garder que les proches pour le repas.</p>
+          <!--
         <b-form-input
           id="inline-form-input-name" class="mb-0 mr-sm-2 mb-sm-0" placeholder="Combien de personnes souhaitez-vous inviter ?"
         ></b-form-input>
-        <br> <br>
-        <img id="popover-target-1" class="pointinfo mb-5" src="../../../public/PointinfoPINK.png" align="center">
+        -->
 
-        <b-popover target="popover-target-1" triggers="hover" placement="top">
+        <br> <br>
+        <img id="popover-target-1" class="pointinfo mb-5" src="../../../public/PointinfoPINK.png" >
+
+        <b-popover class="popover" target="popover-target-1" triggers="hover" placement="top">
           <template #title>Quels sont les différents types de cérémonies ?</template>
           Les types de cérémonies de mariage sont désormais diversifiés. <br>
           Les couples qui souhaitent se marier se demandent quelle option choisir pour la célébration de leur mariage.<br>
@@ -64,19 +79,27 @@
         </b-popover>
       </b-col>
       <b-col>
-        <div> Cérémonie(s) (civile, religieuse...)</div>
+        <div class="info"><U>Cérémonie(s) (civile, religieuse...) :</U></div>
         <br>
+          <p class="info">Là encore, c'est une question de choix. Mais rappelez-vous que si vous ne faites qu'un mariage religieux, il ne sera pas reconnu par la loi. <br>
+          Vous n'aurez donc aucun des droits y afférant (congés, impôts...)</p><br>
+          <!--
         <b-form-input
           id="inline-form-input-name" class="mb-2 mr-sm-2 mb-sm-0" placeholder=""
         ></b-form-input>
+        -->
         <br> <br>
-        Budget prévisionnel
+          <div class="info"><U>Budget prévisionnel :</U></div>
+
         <br>
+          <p class="info">Il vaut mieux le définir très vite ou vous risquez les mauvaises surprises. Cela vous aidera également à définir vos priorités pour tous les choix à faire.</p>
+          <!--
         <b-form-input
           id="inline-form-input-name"
           class="mb-0 mr-sm-2 mb-sm-0"
           placeholder=""
         ></b-form-input>
+        -->
         <br>
         <br>
        <div class="etapesuivante" align="center"> Je passe à l'étape suivante !<a href='/step2'><img  class="pointinfo" src="../../../public/right-arrow.png" align="right"></a></div>
@@ -101,7 +124,11 @@ window.parent.document.title = 'Étape 1'
 
 </script>
 
+
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital@1&display=swap');
+
 .backgroundaboutwedding {
   background-image: url("../../../public/cheers.jpg");
   background-size: cover;
@@ -116,15 +143,25 @@ window.parent.document.title = 'Étape 1'
   transition-delay : 0.5s;
   transition-property: right, opacity;
   transition-duration: 2s;
-  line-height: 1.5rem;
+  line-height: 2.5rem;
   text-align: center;
-  font-family: "Libian SC", sans-serif;
-  font-size:1.5rem;
+  font-family: 'Sansita Swashed', sans-serif;
+  font-size:1.3rem;
   color: #776D5A;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+}
+
+.info {
+    font-family: 'Raleway', sans-serif;
+    font-size:1rem;
+}
+
+.popover {
+    font-family: 'Raleway', sans-serif;
+    font-size:1rem;
 }
 
 #decl:hover, nav:hover {
@@ -160,7 +197,7 @@ window.parent.document.title = 'Étape 1'
 }
 
 .etapesuivante {
-  font-family: "Libian SC", sans-serif;
+  font-family: 'Sansita Swashed', sans-serif;
   font-size: 2rem;
   color: #776D5A;
 }

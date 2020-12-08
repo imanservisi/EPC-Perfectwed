@@ -38,7 +38,7 @@
           <b-card-title class="right">Faites un point administratif.
           </b-card-title>
           <div class="info"> C'est le moment de lister tout ce qui a déjà été fait. Renvoyez les papiers manquants, les demandes de devis...<br>
-          <a href="https://www.service-public.fr/particuliers/vosdroits/F930"></a></div>
+          <a href="https://www.service-public.fr/particuliers/vosdroits/F930" target="_blank"></a></div>
           <br>
           <br>
           <b-card-title class="right">Commencez votre liste de mariage !
@@ -46,7 +46,7 @@
           <div class="info">  La liste de mariage est une tradition qui consiste à permettre aux invités de participer
             <br>
             à la fondation du foyer des époux. De nombreux site internet peuvent vous aider à la faire.<br>
-            <a href="https://www.milirose.com/liste-de-mariage.html">Pour faire votre liste de mariage</a>
+            <a href="https://www.milirose.com/liste-de-mariage.html" target="_blank">Pour faire votre liste de mariage</a>
           </div>
           <br>
           <br>
@@ -55,6 +55,7 @@
       </b-row>
     </b-container>
     <img class="centerimg mt-3 mb-3" src="../../../public/stepbystep/4.png" alt="step1">
+      <a href="/step3"><img class="left" src="../../../public/left-arrow.png" alt="arrow" align="left"/></a>
   </div>
     </app-layout>
 </template>
@@ -84,6 +85,11 @@ window.parent.document.title = 'Étape 4'
   min-width: 20vw;
   display: block;
 
+}
+
+.left {
+    height: 3%;
+    width: 3%;
 }
 
 .explication {

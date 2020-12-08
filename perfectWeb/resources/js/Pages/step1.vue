@@ -14,10 +14,16 @@
 
   <b-container fluid >
     <b-row>
-        <!--
-      <b-col class="center"> <b-calendar label-help="" label-no-date-selected="Choisissez la date de votre mariage"></b-calendar>
+      <b-col class="center"> <b-calendar label-help="" @context="updatedb()" name="wed_date"  :value="data.wed_date" v-model="data.wed_date"  label-no-date-selected="Choisissez la date de votre mariage"></b-calendar>
+          <br><br>
+          <div class="info"><U>Nom de votre projet :</U></div>
+          <br>
+          <b-form-input
+              id="inline-form-input-name" name="title_project" @change="updatedb()" :value="data.title_project" v-model="data.title_project" class="mb-2 mr-sm-2 mb-sm-0" placeholder="Quel est le nom de votre projet ?"
+          ></b-form-input>
+
       </b-col>
-      -->
+
       <b-col>
         <div class="info"><U>Lieu :</U></div>
         <br>
@@ -25,25 +31,22 @@
               le mariage est célébré dans une commune avec laquelle au moins l'un des<br>
               deux époux a des liens durables, de façon directe ou indirecte (c'est-à-dire<br>
               via un parent). A vous ensuite de justifier de ces liens.</p>
-          <!--
+
         <b-form-input
-          id="inline-form-input-name" class="mb-2 mr-sm-2 mb-sm-0" placeholder="Quel est le lieu de votre mariage ?"
+            id="inline-form-input-name" name="wed_city" @change="updatedb()" :value="data.wed_city" v-model="data.wed_city" class="mb-2 mr-sm-2 mb-sm-0" placeholder="Quel est le lieu de votre mariage ?"
         ></b-form-input>
-        -->
         <br> <br>
         <div class="info"><U>Nombre d'invités :</U></div>
         <br>
           <p class="info">A vous de choisir, mais fixez vous des limites, car le budget peut vite monter !<br>
           Une solution pour limiter les frais peut être de faire un vin d'honneur avec<br>
           beaucoup d'invités et de ne garder que les proches pour le repas.</p>
-          <!--
+
         <b-form-input
-          id="inline-form-input-name" class="mb-0 mr-sm-2 mb-sm-0" placeholder="Combien de personnes souhaitez-vous inviter ?"
+            id="inline-form-input-name" name="wed_city" @change="updatedb()" :value="data.nb_guest" v-model="data.nb_guest" class="mb-0 mr-sm-2 mb-sm-0" placeholder="Combien de personnes souhaitez-vous inviter ?"
         ></b-form-input>
-        -->
 
         <br> <br>
-        <img id="popover-target-1" class="pointinfo mb-5" src="../../../public/PointinfoPINK.png" >
 
         <b-popover class="popover" target="popover-target-1" triggers="hover" placement="top">
           <template #title>Quels sont les différents types de cérémonies ?</template>
@@ -84,27 +87,29 @@
         <div class="info"><U>Cérémonie(s) (civile, religieuse...) :</U></div>
         <br>
           <p class="info">Là encore, c'est une question de choix. Mais rappelez-vous que si vous ne faites qu'un mariage religieux, il ne sera pas reconnu par la loi. <br>
-          Vous n'aurez donc aucun des droits y afférant (congés, impôts...)</p><br>
-          <!--
-        <b-form-input
-          id="inline-form-input-name" class="mb-2 mr-sm-2 mb-sm-0" placeholder=""
-        ></b-form-input>
-        -->
+          Vous n'aurez donc aucun des droits y afférant (congés, impôts...)</p>
+          <img id="popover-target-1" class="pointinfo mb-5" src="../../../public/PointinfoPINK.png" >
+
+        <b-form-input id="inline-form-input-name" @change="updatedb()" class="mb-2 mr-sm-2 mb-sm-0" name="ceremony"  :value="data.ceremony" v-model="data.ceremony" placeholder="Nombre de cérémonies">
+
+        </b-form-input>
+
         <br> <br>
           <div class="info"><U>Budget prévisionnel :</U></div>
 
         <br>
           <p class="info">Il vaut mieux le définir très vite ou vous risquez les mauvaises surprises. Cela vous aidera également à définir vos priorités pour tous les choix à faire.</p>
-          <!--
+
         <b-form-input
+            name="budget"  :value="data.budget" v-model="data.budget"
+            @change="updatedb()"
           id="inline-form-input-name"
           class="mb-0 mr-sm-2 mb-sm-0"
-          placeholder=""
+          placeholder="Budget prévisionnel"
         ></b-form-input>
-        -->
         <br>
         <br>
-       <div class="etapesuivante" align="center"> Je passe à l'étape suivante !<a href='/step2'><img  class="pointinfo" src="../../../public/right-arrow.png" align="right"></a></div>
+       <div class="etapesuivante" align="center"> Je valide mon projet et je passe à l'étape suivante !<a href='/step2'><img  class="pointinfo" src="../../../public/right-arrow.png" align="right"></a></div>
       </b-col>
     </b-row>
   </b-container>
@@ -114,13 +119,49 @@
 </template>
 
 <script>
-  import AppLayout from '@/Layouts/AppLayout'
+import AppLayout from '@/Layouts/AppLayout'
+import axios from 'axios'
 
 export default {
             components: {
             AppLayout
         },
-  name: 'step1'
+  name: 'step1',
+    data () {
+        return {
+            data: {
+                wed_date: null,
+                wed_address: null,
+                budget: null,
+                nb_guest: null,
+                ceremony: null,
+                title_project: null
+            },
+            apiProjectsUrl: 'http://localhost:8000/api/projects/'
+        }
+    },
+    methods: {
+        updatedb () {
+            console.log(this.data)
+            axios.put(
+                this.apiProjectsUrl + 1, // 1 a remplacer par project id
+                this.data
+            ).then(function (response) {
+                console.log(response)
+            })
+        },
+        gotoStep2 () {
+        }
+    },
+    mounted () {
+        axios.get(this.apiProjectsUrl + '?user_id=1') // remplacer 1 par variable de seession
+            .catch(error => console.log(error))
+            .then(response => {
+                // console.log(response.data.projects)
+                this.data = response.data.projects[0]
+                console.log(this.data)
+            })
+    }
 }
 window.parent.document.title = 'Étape 1'
 

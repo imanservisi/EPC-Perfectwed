@@ -28,6 +28,7 @@
       </b-row>
     </b-container>
     <img class="centerimg mt-3 mb-3" src="../../../public/stepbystep/6.png" alt="step1">
+      <a href="/step5"><img class="left" src="../../../public/left-arrow.png" alt="arrow" align="left"/></a>
   </div>
     </app-layout>
 </template>
@@ -63,6 +64,11 @@ startConfetti()
   min-width: 20vw;
   display: block;
 
+}
+
+.left {
+    height: 3%;
+    width: 3%;
 }
 
 .explication {

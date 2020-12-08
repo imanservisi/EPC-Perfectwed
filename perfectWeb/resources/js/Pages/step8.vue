@@ -32,6 +32,7 @@
             Illud tamen te esse admonitum volo, primum ut qualis es talem te esse omnes existiment ut, quantum a rerum turpitudine abes, tantum te a verborum libertate seiungas;<br>
           </b-popover>
     <img class="centerimg mt-3 mb-3" src="../../../public/stepbystep/8.png" alt="step1">
+      <a href="/step7"><img class="left" src="../../../public/left-arrow.png" alt="arrow" align="left"/></a>
   </div>
     </app-layout>
 </template>
@@ -69,6 +70,11 @@ window.parent.document.title = 'Étape 8'
     min-width: 20vw;
     display: block;
 
+}
+
+.left {
+    height: 3%;
+    width: 3%;
 }
 
 .explication {

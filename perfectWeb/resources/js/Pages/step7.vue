@@ -14,7 +14,7 @@
           </b-card-title>
           <div class="info">
               En été comme en hiver, mieux vaut être prévenu. Fera-t-il froid ? Y aura-t-il de la pluie ? Faut il prévoir une sécurité ?<br>
-          <a href="https://meteofrance.com/">Quelle météo pour le Jour J ?</a>
+          <a href="https://meteofrance.com/" target="_blank">Quelle météo pour le Jour J ?</a>
           </div>
           <br>
           <br>
@@ -45,6 +45,7 @@
       </b-row>
     </b-container>
     <img class="centerimg mt-3 mb-3" src="../../../public/stepbystep/7.png" alt="step1">
+      <a href="/step6"><img class="left" src="../../../public/left-arrow.png" alt="arrow" align="left"/></a>
   </div>
     </app-layout>
 </template>
@@ -74,6 +75,11 @@ window.parent.document.title = 'Étape 7'
   min-width: 20vw;
   display: block;
 
+}
+
+.left {
+    height: 3%;
+    width: 3%;
 }
 
 .explication {

@@ -19,7 +19,7 @@
           </b-card-title>
           <div class="info">
             La date approche et il est temps de savoir si tata Huguette sera présente et si votre copain Charles vient accompagné ou seul. Le traiteur, en particulier, a besoin de ces informations pour pouvoir prévoir la bonne quantité de nourriture. Relancez ceux qui ne vous ont pas répondu. Vous pouvez également leur proposer des sites de logements près de chez vous.<br>
-            <a href="https://www.airbnb.fr/">Comment se loger facilement</a>
+            <a href="https://www.airbnb.fr/" target="_blank">Comment se loger facilement</a>
           </div>
 
         </b-col>
@@ -28,7 +28,7 @@
           </b-card-title>
           <div class="info">
             Elle doit être à votre goût et dans le thème de votre mariage.<br>
-            <a href="https://www.decorationsdemariage.fr/">Pour vous aider à tout trouver</a>
+            <a href="https://www.decorationsdemariage.fr/" target="_blank">Pour vous aider à tout trouver</a>
           </div>
           <br>
           <br>
@@ -61,7 +61,8 @@
         </b-col>
       </b-row>
     </b-container>
-    <img class="centerimg mt-3 mb-3" src="../../../public/stepbystep/5.png" alt="step1">
+      <img class="centerimg mt-3 mb-3" src="../../../public/stepbystep/5.png" alt="step1">
+      <a href="/step4"><img class="left" src="../../../public/left-arrow.png" alt="arrow" align="left"/></a>
   </div>
     </app-layout>
 </template>
@@ -91,6 +92,11 @@ window.parent.document.title = 'Étape 5'
   min-width: 20vw;
   display: block;
 
+}
+
+.left {
+    height: 3%;
+    width: 3%;
 }
 
 .explication {

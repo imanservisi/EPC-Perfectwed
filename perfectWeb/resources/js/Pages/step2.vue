@@ -11,14 +11,14 @@
       <b-row>
         <b-col class="right">
           <b-card-title class="info"><U>Trouvez l'inspiration :</U></b-card-title>
-          <a data-pin-do="embedBoard" data-pin-lang="fr" data-pin-board-width="400" data-pin-scale-height="240" data-pin-scale-width="80" href="https://www.pinterest.fr/cotemaison/d%25C3%25A9co-mariage/"></a>
+          <a href="https://www.pinterest.fr" target="_blank"><img src="../../../public/inspiration.jpg" alt="couple"/></a>
         </b-col>
         <b-col>
           <b-card-title class="info"><U>Choisissez le lieu du mariage :</U>
           </b-card-title>
           <br>
           <div class="info">Une fois prise la décision de se marier, le plus important est de fixer le lieu du mariage. Aujourd'hui le plus courant est de célébrer le mariage civil à la mairie et le mariage religieux dans un lieu de culte.</div>
-          <div class="info"><a href="https://www.1001salles.com/">Pour trouver une salle</a></div>
+          <div class="info"><a href="https://www.1001salles.com/" target="_blank">Pour trouver une salle</a></div>
           <br>
           <br>
           <b-card-title class="info"><U>Choix des témoins :</U>
@@ -47,7 +47,7 @@
           </b-card-title>
           <br>
           <div class="info">Etape clé dans l’organisation de votre mariage, le fameux faire-part sera non seulement la première annonce de votre heureux événement mais permettra également de donner le ton de votre joli jour !</div>
-          <div class="info"><a href="https://www.monfairepart.com/faire-part-mariage.html">Pour réaliser de beaux faire-parts</a></div>
+          <div class="info"><a href="https://www.monfairepart.com/faire-part-mariage.html" target="_blank">Pour réaliser de beaux faire-parts</a></div>
             <br>
           <br>
           <br>
@@ -60,6 +60,7 @@
       </b-row>
     </b-container>
     <img class="centerimg mt-3 mb-3" src="../../../public/stepbystep/2.png" alt="step1">
+      <a href="/step1"><img class="left" src="../../../public/left-arrow.png" alt="arrow" align="left"/></a>
   </div>
     </app-layout>
 </template>
@@ -88,6 +89,11 @@ window.parent.document.title = 'Étape 2'
   min-width: 20vw;
   display: block;
 
+}
+
+.left {
+    height: 3%;
+    width: 3%;
 }
 
 .info {

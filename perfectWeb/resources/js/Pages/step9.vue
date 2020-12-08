@@ -13,7 +13,7 @@
             </b-card-title>
             <div class="info">
                 Pensez aussi à récupérer les photos du professionnel, afin de garder un souvenir de ce jour si particulier.<br>
-                <a href="https://photos.google.com">Un endroit pour mutualiser toutes les photos</a>
+                <a href="https://photos.google.com" target="_blank">Un endroit pour mutualiser toutes les photos</a>
             </div>
             <br>
             <br>
@@ -28,15 +28,16 @@
           </b-card-title>
           <div class="info">
               Votre avis nous est précieux pour faire évoluer notre site. Vous pouvez également nous attribuer une note :<br>
-              <a href="https://fr.trustpilot.com/">Pour donner votre avis, c'est ici</a>
+              <a href="https://fr.trustpilot.com/" target="_blank">Pour donner votre avis, c'est ici</a>
           </div>
           <br>
           <br>
-          <div class="etapesuivante" align="center"> Je retourne au Board !<a href='/board'><img  class="pointinfo" src="../../../public/right-arrow.png" align="right"></a></div>
+          <div class="etapesuivante" align="center"> Je retourne au Board !<a href='/board'><img class="pointinfo" src="../../../public/right-arrow.png" align="right"></a></div>
         </b-col>
       </b-row>
     </b-container>
     <img class="centerimg mt-3 mb-3" src="../../../public/stepbystep/9.png" alt="step9">
+      <a href="/step8"><img class="left" src="../../../public/left-arrow.png" alt="arrow" align="left"/></a>
   </div>
     </app-layout>
 </template>
@@ -67,6 +68,11 @@ window.parent.document.title = 'Étape 9'
       display: block;
 
   }
+
+.left {
+    height: 3%;
+    width: 3%;
+}
 
   .explication {
       transition-delay : 0.5s;

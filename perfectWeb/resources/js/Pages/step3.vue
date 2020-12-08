@@ -14,20 +14,20 @@
         <b-col class="right">
           <b-card-title class="right">Choisissez votre tenue
           </b-card-title>
-          <img src="../../../public/dresscostume.png" alt="mariés" height="500" width="auto" onabort="" align="center"/>
+            <a href="https://www.mariee.fr/robe-mariee/pronuptia/" target="_blank"><img src="../../../public/wedding-dress.jpg" alt="mariés" height="500" width="auto" onabort="" align="center"/></a>
           <div class="info">Quelle que soit votre idée, essayez, essayez, essayez ! Les professionnels des boutiques de mariage sauront vous conseiller par rapport à vos goûts et à la saison du mariage à venir.<br>
-          <a href="https://www.mariee.fr/robe-mariee/pronuptia/">Où trouver une robe/un costume à votre goût</a></div>
+          </div>
         </b-col>
         <b-col>
           <b-card-title class="center">Trouvez le thème parfait ! </b-card-title>
             <br>
-          <a href="https://www.pinterest.fr/cotemaison/d%C3%A9co-mariage/"><img class="center" src="../../../public/images/theme.jpg" alt="theme"></a>
+          <a href="https://www.pinterest.fr/cotemaison/d%C3%A9co-mariage/" target="_blank"><img class="center" src="../../../public/theme.jpg" alt="theme"></a>
           <a data-pin-do="embedBoard" class="center" data-pin-lang="fr" data-pin-board-width="400" data-pin-scale-height="240" data-pin-scale-width="80" href="https://www.pinterest.fr/deliajanemunikasari/wedding-decorations/"></a>
         </b-col>
 
         <b-col>
           <b-card-title class="right">Pensez au traiteur ! <img id="popover-target-3" class="pointinfo mb-5" src="../../../public/PointinfoPINK.png" alt="traiteur" align="right">
-          <div class="info"><a href="https://lamazzarine.eatbu.com/?lang=fr">Où trouver un traiteur</a></div>
+          <div class="info"><a href="https://lamazzarine.eatbu.com/?lang=fr" target="_blank">Où trouver un traiteur</a></div>
             <br>
             <br>
             <img class="center" src="../../../public/manger.jpg" height="220" width="auto"/>
@@ -49,12 +49,13 @@
                   Une fois ces devis épluchés en long, en large et en travers, rencontrez vos deux préférés et demandez une dégustation des plats. Prenez des photos et posez toutes vos questions (gestion de la vaiselle...)
                   </div>
               </b-popover>
-            <div class="etapesuivante" align="center"> Je passe à l'étape suivante !<a href='/step4'><img  class="pointinfo" src="../../../public/right-arrow.png" alt="arrow" align="right"></a></div>
+            <div class="etapesuivante" align="center"> Je passe à l'étape suivante !<a href='/step4'><img  class="pointinfo" src="../../../public/right-arrow.png" alt="arrow" align="right"/></a></div>
           </b-card-title>
         </b-col>
       </b-row>
     </b-container>
     <img class="centerimg mt-3 mb-3" src="../../../public/stepbystep/3.png" alt="step1">
+    <a href="/step2"><img class="left" src="../../../public/left-arrow.png" alt="arrow" align="left"/></a>
   </div>
     </app-layout>
 </template>
@@ -86,10 +87,15 @@ window.parent.document.title = 'Étape 3'
 
 }
 
+.left {
+    height: 3%;
+    width: 3%;
+}
+/*
 a {
     color: green;
 }
-
+*/
 .photo {
     height: 800%;
     width: auto;

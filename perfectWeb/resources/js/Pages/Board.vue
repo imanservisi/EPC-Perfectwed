@@ -103,7 +103,7 @@
                 </div>
             </div>
         </div>
-    <div class="gotosteps" align="center"> Suivez le guide !<a href="/step1"><img  class="pointinfo" src="../../../public/right-arrow.png" align="right"></a></div>
+    <div class="gotosteps" align="right">Suivez le guide !<a href="/step1"><img  class="pointinfo" src="../../../public/right-arrow.png" align="right"></a></div>
     <google-map />
     </app-layout>
 </template>
@@ -112,6 +112,7 @@
 import axios from 'axios'
 import AppLayout from '@/Layouts/AppLayout'
 import GoogleMap from "./Google/GoogleMap"
+
 export default {
     data () {
         return {
@@ -175,6 +176,7 @@ export default {
 </script>
 
 <style scoped>
+
 li {
     list-style-type: none;
 }
@@ -215,4 +217,7 @@ li {
 .containerPerso{
     justify-content: center;
 }
+
+
+
 </style>

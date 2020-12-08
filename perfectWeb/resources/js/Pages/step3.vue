@@ -14,17 +14,19 @@
         <b-col class="right">
           <b-card-title class="right">Choisissez votre tenue
           </b-card-title>
-          <img src="../../../public/dresscostume.png" height="250" width="auto" align="center"/>
+          <img src="../../../public/dresscostume.png" alt="mariés" height="500" width="auto" onabort="" align="center"/>
           <div class="info">Quelle que soit votre idée, essayez, essayez, essayez ! Les professionnels des boutiques de mariage sauront vous conseiller par rapport à vos goûts et à la saison du mariage à venir.<br>
           <a href="https://www.mariee.fr/robe-mariee/pronuptia/">Où trouver une robe/un costume à votre goût</a></div>
         </b-col>
         <b-col>
           <b-card-title class="center">Trouvez le thème parfait ! </b-card-title>
+            <br>
+          <a href="https://www.pinterest.fr/cotemaison/d%C3%A9co-mariage/"><img class="center" src="../../../public/images/theme.jpg" alt="theme"></a>
           <a data-pin-do="embedBoard" class="center" data-pin-lang="fr" data-pin-board-width="400" data-pin-scale-height="240" data-pin-scale-width="80" href="https://www.pinterest.fr/deliajanemunikasari/wedding-decorations/"></a>
         </b-col>
 
         <b-col>
-          <b-card-title class="right">Pensez au traiteur ! <img id="popover-target-3" class="pointinfo mb-5" src="../../../public/PointinfoPINK.png" align="right">
+          <b-card-title class="right">Pensez au traiteur ! <img id="popover-target-3" class="pointinfo mb-5" src="../../../public/PointinfoPINK.png" alt="traiteur" align="right">
           <div class="info"><a href="https://lamazzarine.eatbu.com/?lang=fr">Où trouver un traiteur</a></div>
             <br>
             <br>
@@ -33,6 +35,7 @@
             <br>
               <b-popover class="popover" target="popover-target-3" triggers="hover" placement="top">
                   <template #title>Comment choisir son traiteur ?</template>
+                  <div class="info">
                   Le traiteur est un poste d’importance, le dîner reste l’un des temps forts de votre réception de mariage. De plus, vous y consacrez une grande partie de votre budget de mariage. De ce fait, le choix est crucial. Voici quelques conseils de Bruno Gourdet de CHEF@Home pour choisir son traiteur de mariage.<br>
                   <b>Quand le traiteur collabore déjà avec le lieu de réception :</b> <br>
                   Il connaît donc parfaitement l’endroit et sera efficace d’un point de vue logistique le Jour J. Cependant, les formules qu’il propose ne sont peut-être pas en accord avec ce que vous souhaitez. Pas de panique, appelez-le rapidement pour connaître ses menus et convenir d’un rendez-vous. N’hésitez pas à faire des commentaires sur sa prestation et demandez si des changements sont possibles…
@@ -44,8 +47,9 @@
                   <br>
                   Ce premier contact se fait en général par téléphone. Cet entretien vous permettra de poser toutes vos questions essentielles. Ce temps-là est précieux, il déterminera la capacité du prestataire à vous conseiller. Demandez des devis et une plaquette de présentation pour étudier les différentes possibilités. La rédaction des propositions commerciales en dit souvent long sur la qualité de prestation. “Les menus doivent être clairs et sans options intempestives” précise Bruno Gourdet.<br>
                   Une fois ces devis épluchés en long, en large et en travers, rencontrez vos deux préférés et demandez une dégustation des plats. Prenez des photos et posez toutes vos questions (gestion de la vaiselle...)
+                  </div>
               </b-popover>
-            <div class="etapesuivante" align="center"> Je passe à l'étape suivante !<a href='/step4'><img  class="pointinfo" src="../../../public/right-arrow.png" align="right"></a></div>
+            <div class="etapesuivante" align="center"> Je passe à l'étape suivante !<a href='/step4'><img  class="pointinfo" src="../../../public/right-arrow.png" alt="arrow" align="right"></a></div>
           </b-card-title>
         </b-col>
       </b-row>
@@ -80,6 +84,16 @@ window.parent.document.title = 'Étape 3'
   min-width: 20vw;
   display: block;
 
+}
+
+a {
+    color: green;
+}
+
+.photo {
+    height: 800%;
+    width: auto;
+    align-self: center;
 }
 
 .explication {

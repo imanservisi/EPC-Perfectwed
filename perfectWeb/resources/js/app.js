@@ -13,6 +13,7 @@ import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import VueConfetti from 'vue-confetti'
+import accueil from './Pages/accueil.vue'
 
 // Install BootstrapVue
 Vue.use(BootstrapVue)
@@ -38,6 +39,7 @@ new Vue({
     store,
     render: (h) =>
         h(InertiaApp, {
+            components:{accueil},
             props: {
                 initialPage: JSON.parse(app.dataset.page),
                 resolveComponent: (name) => require(`./Pages/${name}`).default,

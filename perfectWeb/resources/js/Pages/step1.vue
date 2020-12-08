@@ -3,7 +3,7 @@
 <div>
   <br>
   <div class="explication" >
-    Vous souhaitez réaliser vous-même votre plus beau rêve. Bravo ! Il est temps de commencer à planifier votre mariage... C’est le
+    {{ $page.user.id }}Vous souhaitez réaliser vous-même votre plus beau rêve. Bravo ! Il est temps de commencer à planifier votre mariage... C’est le
     <br>
     moment d’indiquer les premières informations nécessaires à sa réalisation. Vous n’êtes pas sûrs de certaines informations ?
     <br>

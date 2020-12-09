@@ -1,6 +1,7 @@
 <template>
     <app-layout>
         <div class="card cardbudget">
+            <br>
         <div class="explication" align="center">
            Informations générales :
         </div>
@@ -344,9 +345,8 @@ li {
 .cardPerso{
     width: 18rem;
     padding: 5px;
-    background-color: #FFD6D6;
     border-style: none;
-    box-shadow: -1px 7px 184px 1px rgba(125,25,120,0.21);
+    box-shadow: -1px 7px 184px 1px rgba(125, 25, 120, 0.21);
     font-family: 'Poppins', sans-serif;
     font-size:0.9rem
 
@@ -364,12 +364,12 @@ b-label {
     float: none;
     font-family: 'Poppins', sans-serif;text-align: center;
     font-size:1.1rem;
-    color: #776D5A;
+    border: none;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #774C60;
-    color: white;
+    background:none;
+    color: #7D1978;
 
 
 }
@@ -387,7 +387,7 @@ b-label {
     text-align: center;
     font-family: 'Sansita Swashed', sans-serif;
     font-size:1.3rem;
-    color: white;
+    color: #7D1978;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -19,7 +19,7 @@
                     </div>
                     <b-navbar-nav class="mx-auto">
                         <jet-nav-link :href="route('board')">
-                        <img src="../../../public/logobw.png" class="mt-4" width="180rem" height="auto" alt="login"/>
+                        <img src="../../../public/logobw.png" class="mt-3" width="180rem" height="auto" alt="login"/>
                         </jet-nav-link>
                     </b-navbar-nav>
                     <!-- Settings Dropdown -->

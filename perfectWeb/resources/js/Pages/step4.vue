@@ -15,6 +15,27 @@
           <div class="info"> Confirmez la venue de tous vos partenaires, si il manque le traiteur, dépêchez-vous, plus la date du mariage s'approche, plus il est difficile de trouver des professionnels.</div>
           <br>
           <br>
+            <b-card-title class="right">Le choix du photographe<img id="popover-target-2" class="pointinfo mb-5" src="../../../public/PointinfoPINK.png" align="right">
+            </b-card-title>
+            <div class="info">Pour immortaliser ce jour, il vous faut une personne de confiance. Cela peut être un ami ou un professionnel, mais dites vous que le résultat final doit être à votre goût.</div>
+            <a href="https://www.mariages.net/photo-mariage/bouches-du-rhone/marseille" target="_blank"><img class="center" src="../../../public/photographer.jpg" alt="photographer" /></a>
+            <b-popover class="popover" target="popover-target-2" triggers="hover" placement="top">
+                <template #title>Pour être serein</template>
+                <div class="info">
+                    <br>
+                    <b>Réservez très à l'avance le professionnel que vous souhaitez</b> <br>
+                     Certains photographes sont vite engagés, donc il est temps de vous en occuper
+                    <br>
+                    <b>Prévoyez une séance photo dans l'organisation de la journée</b><br>
+                     Tant le temps de trajet que la séance prennent du temps. Il faut donc que vous l'organisiez.
+                    <br>
+                    <b>Organisez les photos de groupe</b>
+                    Faites une liste avec les personnes que vous souhaitez avoir sur les photos. Ensuite, vous pouvez confier cette liste à une personne de confiance (de préférence, qui connaît la majorité des invités) pour qu'elle gère de trouver les personnes.
+                    <br>
+                </div>
+            </b-popover>
+            <br>
+            <br>
           <b-card-title class="right">Avez-vous commencé les essayages ?<img id="popover-target-3" class="pointinfo mb-5" src="../../../public/PointinfoPINK.png" align="right">
           </b-card-title>
           <div class="info"> Si ce n'est pas le cas, pensez à prendre rendez-vous pour essayer votre robe de mariée, et pour monsieur, son costume.</div>
@@ -41,6 +62,27 @@
           <a href="https://www.service-public.fr/particuliers/vosdroits/F930" target="_blank"></a></div>
           <br>
           <br>
+            <b-card-title class="right">Les alliances<img id="popover-target-4" class="pointinfo mb-5" src="../../../public/PointinfoPINK.png" align="right">
+            </b-card-title>
+            <div class="info">C'est une question qui va souvent revenir : souhaitez vous des alliances ? A vous de faire de votre choix !<br>
+                <a href="https://www.histoiredor.com/fr_FR/c/bagues/par-type/alliances/" target="_blank"><img class="center" src="../../../public/rings.jpg" alt="rings"/></a></div>
+            <b-popover class="popover" target="popover-target-4" triggers="hover" placement="top">
+                <template #title>Pour bien les choisir</template>
+                <div class="info">
+                    <br>
+                    <b>Cela prend du temps !</b> <br>
+                    Comptez entre 3 et 6 semaines pour leur conception. Et même si le modèle est déjà là, il peut être agréable d'y avoir une inscription personnalisée (la date, le nom de votre conjoint...)
+                    <br>
+                    <b>Essayez plusieurs modèles</b><br>
+                    Vous devez apprécier de la porter en permanence. Donc, regardez plusieurs modèles, voire plusieurs boutiques.
+                    <br>
+                    <b>Attention à la météo le jour J</b>:
+                    <br>
+                    La chaleur peut faire gonfler les doigts, donc prévoyez un lubrifiant pour le moment de l'échange. Mais sinon, cela finit surtout par une franche rigolade avec tous les invités et officiels.
+                </div>
+            </b-popover>
+            <br>
+            <br>
           <b-card-title class="right">Commencez votre liste de mariage !
           </b-card-title>
           <div class="info">  La liste de mariage est une tradition qui consiste à permettre aux invités de participer

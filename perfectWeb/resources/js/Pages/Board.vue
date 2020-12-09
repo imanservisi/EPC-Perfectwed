@@ -89,17 +89,21 @@
         </div>
         <div class="containerPerso">
         <b-card class="cardPerso my-3">
-            <b-label for="menu">Traiteur : {{ data.menu }} €</b-label>
+            <b-label for="menu">
+                <img src="../../../public/dish.png" class="modify">
+                Traiteur : {{ data.menu }} €</b-label>
             <div>
                 <b-button-sm v-b-modal.modal-7 >
-                    <img src="../../../public/edit.png" class="modify"></b-button-sm>
+                <img src="../../../public/edit.png" class="modify"></b-button-sm>
                 <b-modal id="modal-7" title="Modifiez le menu de votre mariage" >
                     <b-input type="number" name="menu" :value="data.menu" v-model="data.menu" @change="updatedb()" placeholder="Traiteur"></b-input>
                 </b-modal>
             </div>
         </b-card>
         <b-card class="cardPerso my-3">
-            <b-label for="hair">Coiffeur : {{ data.hair }} €</b-label>
+            <b-label for="hair">
+                <img src="../../../public/haircut.png" class="modify">
+                Coiffeur : {{ data.hair }} €</b-label>
             <div>
                 <b-button-sm v-b-modal.modal-8 >
                     <img src="../../../public/edit.png" class="modify"></b-button-sm>

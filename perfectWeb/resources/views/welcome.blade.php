@@ -82,6 +82,7 @@
                <!--<img src="../../../public/weddingultimate.jpg" height="2435" width="5171"/>-->
               </div>
         </div>
+        <script async defer src="//assets.pinterest.com/js/pinit.js"></script>
     </body>
 </html>
 

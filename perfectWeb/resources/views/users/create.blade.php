@@ -1,6 +1,7 @@
 @extends('layouts.layoutAdmin')
 
 @section('contenu')
+<div class="background">
     <div class="row">
         <div class="col-sm-8 offset-sm-2">
             <h1 class="display-3">Ajouter un utilisateur</h1>
@@ -36,9 +37,16 @@
                         <label for="active">Active:</label>
                         <input type="text" class="form-control" name="active"/>
                     </div>
-                    <button type="submit" class="btn btn-primary-outline">Créer</button>
+                    <button type="submit" class="btn btn-primary">Créer</button>
                 </form>
             </div>
         </div>
     </div>
+</div>
 @endsection
+
+<style>
+    .background {
+        background-color: floralwhite;
+    }
+</style>

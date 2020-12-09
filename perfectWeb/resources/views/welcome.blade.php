@@ -93,7 +93,6 @@
                 <a href='/step1'><button class="button btn" > COMMENCER !</button></a>
                <!--<img src="../../../public/weddingultimate.jpg" height="2435" width="5171"/>-->
               </div>
-        </div>
         <script async defer src="//assets.pinterest.com/js/pinit.js"></script>
     </body>
 </html>

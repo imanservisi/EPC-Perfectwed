@@ -1,5 +1,11 @@
 <template>
     <app-layout>
+        <br>
+        <div class="explication" align="center">
+            Votre mariage est dans :
+            <br>
+        </div>
+        <flip-countdown v-if="datetest!= null":deadline="datetest"></flip-countdown>
         <div class="card cardbudget">
             <br>
         <div class="explication" align="center">
@@ -79,12 +85,12 @@
             </div>
             <div class="card-body">
         <div class="text-center">
-            <div for="budget" class="cardbudget" align="center"> Budget souhaité : {{ data.budget }} € &ensp;
+            <div for="budget" class="cardbudget" align="center"> Budget prévu : {{ this.data.budget }} € &ensp;
                 <b-button-sm v-b-modal.modal-21 > <img src="../../../public/edit.png" class="mx-auto" width="20px"></b-button-sm>
             </div>
         </div>
         <div class="text-center">
-            <div  for="budget" class="cardbudget" align="center">Budget calculé : €</div>
+            <div id="Refresh" for="budget" class="cardbudget" align="center">Budget restant : <Budget v-if="this.data==='NaN'":project="this.data"></Budget>€</div>
         </div>
             </div>
         </div>
@@ -245,6 +251,9 @@
 import axios from 'axios'
 import AppLayout from '@/Layouts/AppLayout'
 import GoogleMap from "./Google/GoogleMap"
+import Budget from "./Budget"
+import FlipCountdown from 'vue2-flip-countdown'
+
 export default {
     data () {
         return {
@@ -278,13 +287,23 @@ export default {
     computed: {
         notes () {
             return this.$store.getters.notes
+        },
+        datetest: function () {
+            return this.data.wed_date;
         }
+        //difference() {
+            //let num1, num2;
+           // num1 = this.data.budget;
+            //num2 = this.data.menu+this.data.hair+this.data.ring+this.data.makeup+this.data.decoration+this.data.wine+this.data.transport+this.data.animation+this.data.place_price+this.data.photo+this.data.costume+this.data.announcement+this.data.ceremony+this.data.flower+this.data.other;
+            //return (num1 - num2)
+
+       // }
     },
     methods: {
         updatedb(){
             console.log(this.data)
             axios.put(
-                this.apiProjectsUrl + 1, // 1 a remplacer par project id
+                this.apiProjectsUrl + this.data.id, // 1 a remplacer par project id
                     this.data
                 ).then(function(response){
                     console.log(response)
@@ -292,17 +311,20 @@ export default {
         }
     },
     mounted () {
-        axios.get(this.apiProjectsUrl+'?user_id=1') // remplacer 1 par variable de seession
+        axios.get(this.apiProjectsUrl+'?user_id='+this.$page.user.id) // remplacer 1 par variable de seession
             .catch(error => console.log(error))
             .then(response => {
                 // console.log(response.data.projects)
                 this.data = response.data.projects[0]
+                this.$forceUpdate();
                 console.log(this.data)
             })
     },
     components: {
         AppLayout,
-        GoogleMap
+        GoogleMap,
+        Budget,
+        FlipCountdown
     }
 }
 

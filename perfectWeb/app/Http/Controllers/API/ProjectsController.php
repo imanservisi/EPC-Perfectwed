@@ -3,10 +3,23 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
+use App\Http\Middleware\EncryptCookies;
 use App\Models\Projects;
+use App\Providers\JetstreamServiceProvider;
+use Database\Factories\UserFactory;
+use Illuminate\Foundation\Auth\User;
+use Illuminate\Foundation\Providers\FoundationServiceProvider;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
 use App\Http\Resources\ProjectsResource;
+use Jenssegers\Agent\Agent;
+use Laravel\Jetstream\Features;
+use Laravel\Jetstream\Http\Controllers\Inertia\CurrentUserController;
+use Laravel\Jetstream\Jetstream;
+use Symfony\Component\Console\Helper\Helper;
 
 class ProjectsController extends Controller
 {
@@ -57,7 +70,6 @@ class ProjectsController extends Controller
             'other' => 'nullable',
             'activated' => 'required',
         ]);
-
         if ($validator->fails()) {
             return response(['error' => $validator->errors(), 'Validation Error']);
         }

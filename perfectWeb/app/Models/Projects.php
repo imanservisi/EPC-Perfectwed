@@ -40,5 +40,7 @@ class Projects extends Model
         'other',
     ];
 
+
+
 }
 

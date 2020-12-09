@@ -109,7 +109,7 @@
         ></b-form-input>
         <br>
         <br>
-       <div class="etapesuivante" align="center"> Je valide mon projet et je passe à l'étape suivante !<a href='/step2'><img  class="pointinfo" src="../../../public/right-arrow.png" align="right"></a></div>
+       <div class="etapesuivante" align="center" ><b-button @click="createProject()" > Je valide mon projet et je passe à l'étape suivante !<img  class="pointinfo" src="../../../public/right-arrow.png" align="right"></b-button></div>
       </b-col>
     </b-row>
   </b-container>
@@ -135,31 +135,50 @@ export default {
                 budget: null,
                 nb_guest: null,
                 ceremony: null,
-                title_project: null
+                title_project: null,
+                user_id: this.$page.user.id,
+                id: null,
+                activated:1
             },
-            apiProjectsUrl: 'http://localhost:8000/api/projects/'
+            apiProjectsUrl: 'http://localhost:8000/api/projects/',
+            apiOneProjectUrl: 'http://localhost:8000/api/projectWithId/'
         }
     },
     methods: {
+        createProject(){
+            console.log(this.data.id)
+            console.log(this.$page.user.id)
+            if(this.data.id === null || this.data.id === undefined){
+                axios.post(this.apiProjectsUrl, this.data)
+                    .then(()=>{window.location.href = 'step2'}
+                    )
+            }else{
+                window.location.href = 'step2';
+            }
+        },
         updatedb () {
-            console.log(this.data)
-            axios.put(
-                this.apiProjectsUrl + 1, // 1 a remplacer par project id
-                this.data
-            ).then(function (response) {
-                console.log(response)
-            })
+            if(this.data.id === null || this.data.id === undefined) {
+                axios.put(
+                    this.apiProjectsUrl + this.data.id, // 1 a remplacer par project id
+                    this.data
+                ).then(function (response) {
+                    console.log(response)
+                })
+            }
         },
         gotoStep2 () {
         }
     },
     mounted () {
-        axios.get(this.apiProjectsUrl + '?user_id=1') // remplacer 1 par variable de seession
+        axios.get(this.apiOneProjectUrl + this.$page.user.id ) // remplacer 1 par variable de seession
+            // remplacer 1 par variable de seession
             .catch(error => console.log(error))
             .then(response => {
-                // console.log(response.data.projects)
-                this.data = response.data.projects[0]
-                console.log(this.data)
+                console.log(response)
+                if(response.data.length!==0){
+                    this.data = response.data[0]
+                    console.log(this.data)
+                }
             })
     }
 }

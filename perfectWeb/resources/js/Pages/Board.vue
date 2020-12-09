@@ -258,6 +258,7 @@ export default {
     data () {
         return {
             data:{
+                id: null,
                 title_project:null,
                 wed_date: null,
                 wed_city: null,
@@ -281,7 +282,8 @@ export default {
                 flower: null,
                 other: null,
             },
-            apiProjectsUrl: 'http://localhost:8000/api/projects/'
+            apiProjectsUrl: 'http://localhost:8000/api/projects/',
+            apiOneProjectUrl: 'http://localhost:8000/api/projectWithId/'
         }
     },
     computed: {
@@ -305,19 +307,16 @@ export default {
             axios.put(
                 this.apiProjectsUrl + this.data.id, // 1 a remplacer par project id
                     this.data
-                ).then(function(response){
-                    console.log(response)
-                })
+                )
         }
     },
     mounted () {
-        axios.get(this.apiProjectsUrl+'?user_id='+this.$page.user.id) // remplacer 1 par variable de seession
+        console.log(this.$page.user.id)
+        console.log(this.apiOneProjectUrl + this.$page.user.id )
+        axios.get(this.apiOneProjectUrl + this.$page.user.id ) // remplacer 1 par variable de seession
             .catch(error => console.log(error))
             .then(response => {
-                // console.log(response.data.projects)
-                this.data = response.data.projects[0]
-                this.$forceUpdate();
-                console.log(this.data)
+                 this.data = response.data[0]
             })
     },
     components: {

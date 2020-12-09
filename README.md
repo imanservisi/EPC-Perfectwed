@@ -6,7 +6,7 @@ Il a été réalisé par Yann FONTAINE, Isabelle MANSERVISI, David TA et Claire 
 
 Il s'agit d'un site web qui permet à un couple désirant de se marier d'être accompagné par des conseils durant la préparation de leur mariage.
 
-Le site a été developpé avec Laravel en backend pour la création d'API et de Vue.js pour le frontend.
+Le site a été developpé avec Laravel en backend pour la création d'API, Vue.js pour le frontend et de MySQL pour la base de données.
 
 ## Preview
 
@@ -15,7 +15,7 @@ Le site a été developpé avec Laravel en backend pour la création d'API et de
 
 ## Installation
 
-Le projet nécessite Node.js, composer.
+Le projet nécessite Node.js, Composer ainsi que le setup d'une base de données MySQL.
 
 Dans la racine du projet, exécutez les commandes suivantes :
 ```bash

@@ -17,7 +17,7 @@ Le site a été developpé avec Laravel en backend pour la création d'API et de
 
 Le projet nécessite Node.js, composer.
 
-Dans la racine du projet et exécutez les commandes suivantes :
+Dans la racine du projet, exécutez les commandes suivantes :
 ```bash
 composer install
 npm run dev

@@ -43,7 +43,7 @@
           beaucoup d'invités et de ne garder que les proches pour le repas.</p>
 
         <b-form-input
-            id="inline-form-input-name" name="wed_city" @change="updatedb()" :value="data.nb_guest" v-model="data.nb_guest" class="mb-0 mr-sm-2 mb-sm-0" placeholder="Combien de personnes souhaitez-vous inviter ?"
+            id="inline-form-input-name" type="number" name="wed_city" @change="updatedb()" :value="data.nb_guest" v-model="data.nb_guest" class="mb-0 mr-sm-2 mb-sm-0" placeholder="Combien de personnes souhaitez-vous inviter ?"
         ></b-form-input>
 
         <br> <br>
@@ -90,7 +90,7 @@
           Vous n'aurez donc aucun des droits y afférant (congés, impôts...)</p>
           <img id="popover-target-1" class="pointinfo mb-5" src="../../../public/PointinfoPINK.png" >
 
-        <b-form-input id="inline-form-input-name" @change="updatedb()" class="mb-2 mr-sm-2 mb-sm-0" name="ceremony"  :value="data.ceremony" v-model="data.ceremony" placeholder="Nombre de cérémonies">
+        <b-form-input id="inline-form-input-name" type="number" @change="updatedb()" class="mb-2 mr-sm-2 mb-sm-0" name="ceremony"  :value="data.ceremony" v-model="data.ceremony" placeholder="Nombre de cérémonies">
 
         </b-form-input>
 
@@ -101,7 +101,7 @@
           <p class="info">Il vaut mieux le définir très vite ou vous risquez les mauvaises surprises. Cela vous aidera également à définir vos priorités pour tous les choix à faire.</p>
 
         <b-form-input
-            name="budget"  :value="data.budget" v-model="data.budget"
+            type="number" name="budget"  :value="data.budget" v-model="data.budget"
             @change="updatedb()"
           id="inline-form-input-name"
           class="mb-0 mr-sm-2 mb-sm-0"

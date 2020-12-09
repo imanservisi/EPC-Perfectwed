@@ -26,7 +26,7 @@
             @if (Route::has('login'))
                 <div class='navbar' style="background-color: #DA627D">
                     @auth
-                        <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 underline">Mon projet</a>
+                        <a href="{{ url('/board') }}" class="text-sm text-gray-700 underline">Mon projet</a>
                     @else
                         <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Connexion</a>
 
@@ -36,6 +36,18 @@
                     @endauth
                 </div>
             @endif
+        </div>
+
+        <div>
+            @if (Auth::user())
+                @if (Auth::user()->admin==1)
+                    <div class="col-xs">
+                        <a class="btn btn-danger mx-2" href="{{route('admin')}}" role="button">Admin Panel</a>
+                    </div>
+                @endif
+            @endif
+        </div>
+
             <div class="backgroundperfectwedding">
                 <br>
                 <div class="concept">Imaginez et realisez le plus beau jour de votre vie</div>

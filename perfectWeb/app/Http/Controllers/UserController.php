@@ -14,7 +14,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::withTrashed()->oldest('name')->paginate(5);
+        $users = User::withTrashed()->oldest('name')->paginate(30);
         return view('users.index', compact('users'));
     }
 
@@ -108,19 +108,19 @@ class UserController extends Controller
     {
         $user = User::find($id);
         $user->delete();
-        return redirect('/users')->with('success', 'User deleted!');
+        return redirect('/users')->with('success', 'User trashed!');
     }
 
     public function forceDestroy($id)
     {
         User::withTrashed()->whereId($id)->firstOrFail()->forceDelete();
-        return back()->with('name', 'Le film a bien été supprimé définitivement dans la base de données.');
+        return back()->with('success', 'Utilisateur supprimé définitivement dans la base de données.');
     }
 
     public function restore($id)
     {
         User::withTrashed()->whereId($id)->firstOrFail()->restore();
-        return back()->with('name', 'Le film a bien été restauré.');
+        return back()->with('success', 'Utilisateur restauré.');
     }
 }
 

@@ -1,3 +1,6 @@
+![alt text](https://www.coding-academy.fr/wp-content/uploads/2017/10/CODING_LOGO_CMJN-1320x599.png)
+
+
 # Projet de fin de formation : PerfectWed
 
 PerfectWed est un projet de fin de formation de la Coding Academy by Epitech.

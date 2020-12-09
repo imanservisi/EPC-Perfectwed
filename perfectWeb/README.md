@@ -1,7 +1,7 @@
-##My Perfect Wedding
+## My Perfect Wedding
 Because every wedding must be perfect !
 
-##Description
+## Description
 End Course Project.
 It's a web site proposing an help to organize a wedding.
 It proposes a board where to store all important datas (wedding place, number of guests, budget...). You can compare your budget to your expenses.
@@ -36,17 +36,17 @@ php artisan serve
 ![](public/Screen3.png)
 ![](public/Screen.png)
 
-##Built with
+## Built with
 - Laravel(https://laravel.com/)
 - Laravel dependencies (Jetstream/Inertia)(https://jetstream.laravel.com/1.x/introduction.html)
 - VueJS(https://vuejs.org/v2/guide/)
 - MySQL(https://www.mysql.com/fr/)
 
-##Authors
+## Authors
 - Yann Fontaine
 - Isabelle Manservisi  
 - David Ta  
 - Claire Wendlandt
 
-##Project status
+## Project status
 Made in 2 weeks, it's an End Course Project. It stopped on December 2020, the 11th. 

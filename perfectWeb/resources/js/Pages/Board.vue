@@ -10,7 +10,7 @@
         <b-card class="cardPerso my-3">
             <b-label for="title_project">Nom du mariage :
                 <br>
-                {{ data.title_project }}</b-label>
+                {{ data.title_project }} </b-label>
             <div>
                 <b-button-sm v-b-modal.modal-1 >
                     <img src="../../../public/edit.png" class="modify"></b-button-sm>

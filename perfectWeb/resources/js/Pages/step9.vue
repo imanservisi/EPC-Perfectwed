@@ -140,5 +140,4 @@ window.parent.document.title = 'Étape 9'
   }
   </style>
 
-<script>
 

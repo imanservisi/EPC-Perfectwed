@@ -1,5 +1,5 @@
 <template>
-    <div class="min-h-screen">
+    <div class="min-h-screen" @click="stop">
         <nav class="bgcolor border-b border-gray-100">
             <!-- Primary Navigation Menu -->
             <div class=" mx-auto px-4 sm:px-1 lg:px-8">
@@ -229,6 +229,9 @@
         },
 
         methods: {
+            stop () {
+                this.$confetti.stop()
+            },
             switchToTeam(team) {
                 this.$inertia.put(route('current-team.update'), {
                     'team_id': team.id

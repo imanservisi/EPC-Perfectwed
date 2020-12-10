@@ -11,15 +11,27 @@
   </div>
 <br>
   <br>
+    <b-container>
+        <div>
+            <p class="center">Les champs avec <abbr class="abbr">*</abbr> sont obligatoires.</p>
+        </div>
+    </b-container>
 
   <b-container fluid >
     <b-row>
-      <b-col class="center"> <b-calendar label-help="" @context="updatedb()" name="wed_date"  :value="data.wed_date" v-model="data.wed_date"  label-no-date-selected="Choisissez la date de votre mariage"></b-calendar>
+      <b-col class="center"> <abbr class="abbr">*</abbr><b-calendar label-help="" @context="updatedb()" name="wed_date"  :value="data.wed_date" v-model="data.wed_date"  label-no-date-selected='Choisissez la date de votre mariage' aria-required="true"></b-calendar>
           <br><br>
-          <div class="info"><U>Nom de votre projet :</U></div>
+          <div class="info"><abbr class="abbr">*</abbr><U>Nom de votre projet :</U></div>
           <br>
           <b-form-input
-              id="inline-form-input-name" name="title_project" @change="updatedb()" :value="data.title_project" v-model="data.title_project" class="mb-2 mr-sm-2 mb-sm-0" placeholder="Quel est le nom de votre projet ?"
+              id="inline-form-input-name"
+              name="title_project"
+              @change="updatedb()"
+              :value="data.title_project"
+              v-model="data.title_project"
+              class="mb-2 mr-sm-2 mb-sm-0"
+              placeholder="Quel est le nom de votre projet ?"
+              required
           ></b-form-input>
 
       </b-col>
@@ -107,8 +119,8 @@
           class="mb-0 mr-sm-2 mb-sm-0"
           placeholder="Budget prévisionnel"
         ></b-form-input>
-        <br>
-        <br>
+          <br>
+          <br>
        <div class="etapesuivante" align="center" ><b-button @click="createProject()" > Je valide mon projet et je passe à l'étape suivante !<img  class="pointinfo" src="../../../public/right-arrow.png" align="right"></b-button></div>
       </b-col>
     </b-row>
@@ -148,13 +160,19 @@ export default {
         createProject(){
             console.log(this.data.id)
             console.log(this.$page.user.id)
-            if(this.data.id === null || this.data.id === undefined){
-                axios.post(this.apiProjectsUrl, this.data)
-                    .then(()=>{window.location.href = 'step2'}
-                    )
-            }else{
-                window.location.href = 'step2';
+            if(this.data.title_project === null) {
+                alert("Vous devez rentrer la date du mariage et le nom du projet !");
             }
+            else {
+                if(this.data.id === null || this.data.id === undefined){
+                    axios.post(this.apiProjectsUrl, this.data)
+                        .then(()=>{window.location.href = 'step2'}
+                        )
+                }else{
+                    window.location.href = 'step2';
+                }
+            }
+
         },
         updatedb () {
             if(this.data.id === null || this.data.id === undefined) {
@@ -242,6 +260,7 @@ window.parent.document.title = 'Étape 1'
   align-content: center;
   align-items: center;
   text-align: center;
+
 }
 
 .pointinfo {
@@ -264,5 +283,11 @@ window.parent.document.title = 'Étape 1'
   font-family: 'Sansita Swashed', sans-serif;
   font-size: 2rem;
   color: #776D5A;
+}
+
+.abbr {
+    font-size: 120%;
+    color: red;
+    font-family: sans-serif;
 }
 </style>

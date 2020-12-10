@@ -12,26 +12,36 @@
     <b-container fluid >
       <b-row>
         <b-col class="right">
-          <b-card-title class="right">Choisissez votre tenue
+          <b-card-title class="center">Choisissez votre tenue
           </b-card-title>
-            <a href="https://www.mariee.fr/robe-mariee/pronuptia/" target="_blank"><img src="../../../public/wedding-dress.jpg" alt="mariés" height="500" width="auto" onabort="" align="center"/></a>
+            <br>
+            <br>
+            <a href="https://www.mariee.fr/robe-mariee/pronuptia/" target="_blank"><img src="../../../public/wedding-dress.jpg" class="img" alt="mariés" height="500" width="auto" onabort="" align="center"/></a>
           <div class="info">Quelle que soit votre idée, essayez, essayez, essayez ! Les professionnels des boutiques de mariage sauront vous conseiller par rapport à vos goûts et à la saison du mariage à venir.<br>
           </div>
         </b-col>
         <b-col>
           <b-card-title class="center">Trouvez le thème parfait ! </b-card-title>
             <br>
-          <a href="https://www.pinterest.fr/cotemaison/d%C3%A9co-mariage/" target="_blank"><img class="center" src="../../../public/theme.jpg" alt="theme"></a>
-          <a data-pin-do="embedBoard" class="center" data-pin-lang="fr" data-pin-board-width="400" data-pin-scale-height="240" data-pin-scale-width="80" href="https://www.pinterest.fr/deliajanemunikasari/wedding-decorations/"></a>
-        </b-col>
+          <a href="https://www.pinterest.fr/cotemaison/d%C3%A9co-mariage/" target="_blank"><img class="center img" src="../../../public/theme.jpg" alt="theme"></a>
+
+      <a data-pin-do="embedBoard" class="center" data-pin-lang="fr" data-pin-board-width="400" data-pin-scale-height="240" data-pin-scale-width="80" href="https://www.pinterest.fr/deliajanemunikasari/wedding-decorations/"></a>
+       </b-col>
 
         <b-col>
-          <b-card-title class="right">Pensez au traiteur ! <img id="popover-target-3" class="pointinfo mb-5" src="../../../public/PointinfoPINK.png" alt="traiteur" align="right">
-          <div class="info"><a href="https://lamazzarine.eatbu.com/?lang=fr" target="_blank">Où trouver un traiteur</a></div>
+          <b-card-title class="center">Pensez au traiteur ! <img id="popover-target-3" class="pointinfo mb-5" src="../../../public/PointinfoPINK.png" alt="traiteur" align="right">
             <br>
             <br>
-            <img class="center" src="../../../public/manger.jpg" height="220" width="auto"/>
-            <br>
+            <img class="center img" src="../../../public/manger.jpg" height="220" width="auto"/>
+              <br>
+              Tous les traiteurs à {{data.wed_city}}
+      <iframe class="pull-center"
+          width="400"
+          height="250"
+          frameborder="0" style="border:0"
+          :src="this.link" allowfullscreen>
+      </iframe>
+              <br>
             <br>
               <b-popover class="popover" target="popover-target-3" triggers="hover" placement="top">
                   <template #title>Comment choisir son traiteur ?</template>
@@ -61,15 +71,74 @@
 </template>
 
 <script>
-  import AppLayout from '@/Layouts/AppLayout'
+import AppLayout from '@/Layouts/AppLayout'
+import axios from 'axios'
 
 export default {
-            components: {
-            AppLayout
+    components: {
+        AppLayout
+    },
+    name: 'step1',
+    data () {
+        return {
+            data: {
+                link:'',
+                wed_date: null,
+                wed_address: null,
+                wed_city: null,
+                budget: null,
+                nb_guest: null,
+                ceremony: null,
+                title_project: null,
+                user_id: this.$page.user.id,
+                id: null,
+                activated:1
             },
-  name: 'step3'
+            apiProjectsUrl: 'http://localhost:8000/api/projects/',
+            apiOneProjectUrl: 'http://localhost:8000/api/projectWithId/'
+        }
+    },
+    methods: {
+        createProject(){
+            console.log(this.data.id)
+            console.log(this.$page.user.id)
+            if(this.data.id === null || this.data.id === undefined){
+                axios.post(this.apiProjectsUrl, this.data)
+                    .then(()=>{window.location.href = 'step2'}
+                    )
+            }else{
+                window.location.href = 'step2';
+            }
+        },
+        updatedb () {
+            if(this.data.id === null || this.data.id === undefined) {
+                axios.put(
+                    this.apiProjectsUrl + this.data.id, // 1 a remplacer par project id
+                    this.data
+                ).then(function (response) {
+                    console.log(response)
+                })
+            }
+        },
+        gotoStep2 () {
+        }
+    },
+    mounted () {
+        axios.get(this.apiOneProjectUrl + this.$page.user.id ) // remplacer 1 par variable de seession
+            // remplacer 1 par variable de seession
+            .catch(error => console.log(error))
+            .then(response => {
+                console.log(response)
+                if(response.data.length!==0){
+                    this.data = response.data[0]
+                    this.link = 'https://www.google.com/maps/embed/v1/search?key=AIzaSyBorbHbjQajqyRY8MqVtYlImfBHKmD-vjA&q=traiteursmariagein' + this.data.wed_city
+                    console.log(this.data.wed_city)
+                    console.log(this.link)
+                }
+            })
+    }
 }
-window.parent.document.title = 'Étape 3'
+window.parent.document.title = 'Étape 1'
 
 </script>
 
@@ -165,5 +234,14 @@ a {
     font-family: 'Sansita Swashed', sans-serif;
     font-size: 2rem;
     color: #776D5A;
+}
+
+.img {
+    display: flex;
+    justify-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    height: 12em;
+    width: auto;
 }
 </style>

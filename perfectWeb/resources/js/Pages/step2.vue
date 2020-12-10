@@ -11,7 +11,8 @@
       <b-row>
         <b-col class="right">
           <b-card-title class="info"><U>Trouvez l'inspiration :</U></b-card-title>
-          <a href="https://www.pinterest.fr" target="_blank"><img src="../../../public/inspiration.jpg" alt="couple"/></a>
+            <br>
+          <a href="https://www.pinterest.fr" target="_blank"><img src="../../../public/inspiration.jpg" alt="couple" class="img"/></a>
         </b-col>
         <b-col>
           <b-card-title class="info"><U>Choisissez le lieu du mariage :</U>
@@ -51,15 +52,14 @@
             <br>
           <br>
             <b-card-title class="info"><U>Les faire-parts, c'est pas pour nous !</U>
+                <div class="info"><a href="https://facebook.com" target="_blank">
+                    <img class="facebook" src="../../../public/Facebook_logo.jpg" align="right"/></a></div>
+
             </b-card-title>
             <br>
             <div class="info">Vous n'avez pas envie de créer des faire-parts ? Pourquoi pas ! De nombreux outils nous permettent maintenant de prévenir nos proches de ces grands évènements. Alors, par mail, par sms ou via facebook, tout est faisable.</div>
-            <div class="info"><a href="https://facebook.com" target="_blank"><img class="facebook" src="../../../public/Facebook_logo.jpg"/></a></div>
           <br>
-          <br>
-          <br>
-          <br>
-          <br>
+            <br>
           <div class="etapesuivante" align="center"> Je passe à l'étape suivante !<a href='/step3'><img  class="pointinfo mb-5" src="../../../public/right-arrow.png" align="right"></a></div>
         </b-col>
       </b-row>
@@ -139,6 +139,15 @@ window.parent.document.title = 'Étape 2'
   margin-left: auto;
   margin-right: auto;
   height: 100px;
+}
+
+.img {
+    display: flex;
+    justify-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    height: 25em;
+    width: auto;
 }
 .center{
   align-content: center;

@@ -113,7 +113,7 @@
                         <input type="text" class="form-control" name="other"/>
                     </div>
 
-                    <button type="submit" class="btn btn-primary-outline">Créer</button>
+                    <button type="submit" class="btn btn-primary">Créer</button>
                 </form>
             </div>
         </div>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Project;
 
 class UserController extends Controller
 {
@@ -108,12 +109,15 @@ class UserController extends Controller
     {
         $user = User::find($id);
         $user->delete();
+
         return redirect('/users')->with('success', 'User trashed!');
     }
 
     public function forceDestroy($id)
     {
         User::withTrashed()->whereId($id)->firstOrFail()->forceDelete();
+        $project = Project::where('user_id', $id);
+        $project->delete();
         return back()->with('success', 'Utilisateur supprimé définitivement dans la base de données.');
     }
 

@@ -41,6 +41,8 @@
         </b-card-text>
       </b-card>
     </b-card-group>
+      <br>
+      <br>HELLO
     <b-button class="button" > COMMENCER !</b-button>
    <!--<img src="../../../public/weddingultimate.jpg" height="2435" width="5171"/>-->
   </div>

@@ -89,9 +89,12 @@
                 <b-button-sm v-b-modal.modal-21 > <img src="../../../public/edit.png" class="mx-auto" width="20px"></b-button-sm>
             </div>
         </div>
+                <div class="text-center">
+                    <div for="budget" class="cardbudget" align="center"> Budget total des notes : {{this.sumbudget}} € &ensp;
+                    </div>
+                </div>
         <div class="text-center">
-            <div id="Refresh" for="budget" class="cardbudget" align="center">Budget restant : <Budget v-if="this.data==='NaN'":project="this.data"></Budget>€</div>
-        </div>
+            <div id="Refresh" for="budget" class="cardbudget" align="center">Budget restant : <Budget :project="this.data"></Budget>€</div>        </div>
             </div>
         </div>
         <div class="containerPerso">
@@ -140,12 +143,15 @@
             </div>
         </b-card>
         <b-card class="cardPerso my-3">
-            <b-label for="decoration">Décoration : {{ data.decoration }} €</b-label>
+         <b-label v-if="(data.decoration==null) || (data.decoration==undefined)" for="decoration">Décoration : {{$forceUpdate(data.decoration=0)}} 0 €</b-label>
+            <b-label v-else="data.decoration" for="decoration">Décoration : {{data.decoration}}</b-label>
+            <!-- <b-label for="decoration">Décoration : {{data.decoration}} €</b-label> -->
+
             <div>
                 <b-button-sm v-b-modal.modal-11 >
                     <img src="../../../public/edit.png" class="modify"></b-button-sm>
                 <b-modal id="modal-11" title="Prix de la décoration" >
-                    <b-input type="number" name="decoration" :value="data.decoration" v-model="data.decoration" @change="updatedb()" placeholder="Décoration"></b-input>
+                    <b-input type="number" name="decoration" :value="0" :min="0" :max="100" v-model="data.decoration" @change="updatedb()" placeholder="Décoration"></b-input>
                 </b-modal>
             </div>
         </b-card>
@@ -239,7 +245,7 @@
                 </b-modal>
             </div>
         </b-card>
-            <b-modal id="modal-21" title="Prix des fleurs" >
+            <b-modal id="modal-21" title="Budget" >
                 <b-input type="number" name="budget" :value="data.budget" v-model="data.budget" @change="updatedb()"  placeholder="Budget"></b-input>
             </b-modal>
     </div>
@@ -292,6 +298,9 @@ export default {
         },
         datetest: function () {
             return this.data.wed_date;
+        },
+        sumbudget() {
+            return (parseInt(this.data.menu) + parseInt(this.data.hair) + parseInt(this.data.ring) + parseInt(this.data.makeup) + parseInt(this.data.decoration) + parseInt(this.data.wine) + parseInt(this.data.transport) + parseInt(this.data.animation) + parseInt(this.data.place_price) + parseInt(this.data.photo) + parseInt(this.data.costume) + parseInt(this.data.announcement) + parseInt(this.data.ceremony) + parseInt(this.data.flower));
         }
         //difference() {
             //let num1, num2;
@@ -308,7 +317,7 @@ export default {
                 this.apiProjectsUrl + this.data.id, // 1 a remplacer par project id
                     this.data
                 )
-        }
+        },
     },
     mounted () {
         console.log(this.$page.user.id)

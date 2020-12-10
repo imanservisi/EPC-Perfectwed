@@ -22,7 +22,7 @@ export default {
             let num1, num2;
             this.$forceUpdate();
             num1 = this.project.budget;
-            num2 = this.project.menu + this.project.hair + this.project.ring + this.project.makeup + this.project.decoration + this.project.wine + this.project.transport + this.project.animation + this.project.place_price + this.project.photo + this.project.costume + this.project.announcement + this.project.ceremony + this.project.flower + this.project.other;
+            num2 = parseInt(this.project.menu) + parseInt(this.project.hair) + parseInt(this.project.ring) + parseInt(this.project.makeup) + parseInt(this.project.decoration) + parseInt(this.project.wine) + parseInt(this.project.transport) + parseInt(this.project.animation) + parseInt(this.project.place_price) + parseInt(this.project.photo) + parseInt(this.project.costume) + parseInt(this.project.announcement) + parseInt(this.project.ceremony) + parseInt(this.project.flower);
             return (num1 - num2)
 
         }

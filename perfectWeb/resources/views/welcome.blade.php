@@ -21,17 +21,31 @@
             }
         </style> --}}
     </head>
-    <body class="antialiased">
+    <body class="hello">
         <div class=>
             @if (Route::has('login'))
-                <div class='navbar' style="background-color: #DA627D">
+                <div class='navbar' style="background-color: #B6244F;">
                     @auth
-                        <a href="{{ url('/board') }}" class="text-sm text-gray-700 underline">Mon projet</a>
-                    @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Connexion</a>
+                        <a href="{{ url('/board') }}" class=" ml-4 text-sm text-gray-700 underline" style="color:white;">Mon projet</a>
 
+                        <navbar-nav class="mx-auto">
+                            <jet-nav-link :href="route('board')">
+                                <img src="images/logobw.png" class="mt-2" width="140rem" height="auto" alt="login"/>
+                            </jet-nav-link>
+                        </navbar-nav>
+                    @else
+                        <a class="pull-right text-sm text-gray-700 underline" style="color: #B6244F;">Inscription </a>
+                        &ensp;&ensp;
+                        <a class="pull-right text-sm text-gray-700 underline" style="color: #B6244F;">Connexion</a>
+                        <navbar-nav class="mx-auto">
+                            <jet-nav-link :href="route('board')">
+                                <img src="images/logobw.png" class="mt-3" width="140rem" height="auto" alt="login"/>
+                            </jet-nav-link>
+                        </navbar-nav>
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Inscription</a>
+                            <a href="{{ route('register') }}" class="pull-right text-sm text-gray-700 underline" style="color: white">Inscription </a>
+                            &ensp;&ensp;
+                            <a href="{{ route('login') }}" class="pull-right text-sm text-gray-700 underline" style="color: white">Connexion</a>
                         @endif
                     @endauth
                 </div>
@@ -50,16 +64,18 @@
 
             <div class="backgroundperfectwedding">
                 <br>
-                <div class="concept">Imaginez et realisez le plus beau jour de votre vie</div>
+                <div class="concept">Imaginez et realisez le plus beau jour de votre vie !</div>
+                <br>
                 <br>
                 <!-- CARD GROUP -->
-                <div class= 'card-group deck'>
+                <div class="row pull-center">
+                <div class= 'card-group deck mx-4 pull-center'>
                   <div class="card transparent">
                     <img src="/images/calendar.png" class="centerimg" alt="calendar">
                     <br>
                     <p class="title">Planification</p>
                     <div class='card-text' class="content">
-                      Ajoutez tous vos rendez-vous et dates-clés de votre mariage, pour ne rien oublier.
+                        <div style="text-align: center">Ajoutez tous vos rendez-vous et dates-clés de votre mariage, pour ne rien oublier.</div>
                     </div>
                 </div>
 
@@ -68,7 +84,7 @@
                     <br>
                     <p class="title">Budget</p>
                     <div class='card-text' class="content">
-                      Calculez en fonction de vos moyens financiers chacune de vos dépenses.
+                        <div style="text-align: center">Calculez en fonction de vos moyens financiers chacune de vos dépenses.</div>
                     </div>
                   </div>
 
@@ -77,7 +93,7 @@
                     <br>
                     <p class="title">Conseil</p>
                     <div class='card-text' class="content">
-                      Laissez vous guider étape par étape, des conseils pour réussir votre mariage vous accompagneront.
+                        <div style="text-align: center"> Laissez vous guider étape par étape, des conseils pour réussir votre mariage vous accompagneront.</div>
                     </div>
                 </div>
 
@@ -86,13 +102,18 @@
                     <br>
                     <p class="title">Liste</p>
                     <div class='card-text' class="content">
-                      N’oubliez aucun détail en notant tous les détails importants à la réalisation de votre aventure
+                        <div style="text-align: center">N’oubliez aucun détail en notant tous les détails importants à la réalisation de votre aventure </div>
                     </div>
                 </div>
             </div>
-                <a href='/step1'><button class="button btn" > COMMENCER !</button></a>
+                <br>
+                <br>
                <!--<img src="../../../public/weddingultimate.jpg" height="2435" width="5171"/>-->
               </div>
+                <div class="d-flex justify-content-center">
+                <button type="button" class="btn text-white pull-center text-center" style="background-color:#B6244F" ><a href='/step1' style="color:white">COMMENCER !</a></button>
+                </div>
+                </div>
         <script async defer src="//assets.pinterest.com/js/pinit.js"></script>
     </body>
 </html>
@@ -169,10 +190,13 @@
       font-family: "Libian SC", sans-serif;
       font-weight: bold;
       font-size:1.8rem;
-      background-color: #DA627D;
+      background-color: #B6244F;
       display: flex;
       justify-content: center;
       align-items: center;
       margin: 0 auto;
+    }
+    .hello {
+        background-color: #B6244F;
     }
     </style>

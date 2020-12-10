@@ -1,7 +1,7 @@
 <template>
   <div class="backgroundperfectwedding">
     <br>
-    <div class="concept">Imaginez et realisez le plus beau jour de votre vie</div>
+    <div class="concept">GROUWImaginez et realisez le plus beau jour de votre vie</div>
     <br>
     <!-- CARD GROUP -->
     <b-card-group deck>

@@ -399,7 +399,7 @@ b-label {
     justify-content: center;
     align-items: center;
     background:none;
-    color: #7D1978;
+    color: #7d1978;
 
 
 }

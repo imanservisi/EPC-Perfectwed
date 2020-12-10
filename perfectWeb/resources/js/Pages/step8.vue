@@ -22,15 +22,7 @@
       </b-row>
     </b-container>
           <br> <br>
-          <b-popover target="popover-target-4" triggers="hover" placement="top">
-            <template #title>Pourquoi nous noter ?</template>
-            Illud tamen te esse admonitum volo, primum ut qualis es talem te esse omnes existiment ut, quantum a rerum turpitudine abes, tantum te a verborum libertate seiungas;<br>
-          </b-popover>
 
-          <b-popover target="popover-target-5" triggers="hover" placement="top">
-            <template #title>Les photos de votre mariage</template>
-            Illud tamen te esse admonitum volo, primum ut qualis es talem te esse omnes existiment ut, quantum a rerum turpitudine abes, tantum te a verborum libertate seiungas;<br>
-          </b-popover>
     <img class="centerimg mt-3 mb-3" src="../../../public/stepbystep/8.png" alt="step1">
       <a href="/step7"><img class="left" src="../../../public/left-arrow.png" alt="arrow" align="left"/></a>
   </div>

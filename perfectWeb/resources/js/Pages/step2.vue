@@ -50,6 +50,11 @@
           <div class="info"><a href="https://www.monfairepart.com/faire-part-mariage.html" target="_blank">Pour réaliser de beaux faire-parts</a></div>
             <br>
           <br>
+            <b-card-title class="info"><U>Les faire-parts, c'est pas pour nous !</U>
+            </b-card-title>
+            <br>
+            <div class="info">Vous n'avez pas envie de créer des faire-parts ? Pourquoi pas ! De nombreux outils nous permettent maintenant de prévenir nos proches de ces grands évènements. Alors, par mail, par sms ou via facebook, tout est faisable.</div>
+            <div class="info"><a href="https://facebook.com" target="_blank"><img class="facebook" src="../../../public/Facebook_logo.jpg"/></a></div>
           <br>
           <br>
           <br>
@@ -89,6 +94,13 @@ window.parent.document.title = 'Étape 2'
   min-width: 20vw;
   display: block;
 
+}
+
+.facebook {
+    height: 10%;
+    width: 10%;
+    alignment: center;
+    align-self: center;
 }
 
 .left {

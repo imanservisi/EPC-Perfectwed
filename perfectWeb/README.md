@@ -1,15 +1,20 @@
-## My Perfect Wedding
-Because every wedding must be perfect !
+# Projet de fin de formation : PerfectWed
+
+PerfectWed is an End Course Project of the Coding Academy by Epitech.
+
+It has been realised during December 2020.
 
 ## Description
 End Course Project.
-It's a web site proposing an help to organize a wedding.
+It's a web site proposing an help to organize a wedding to a couple.
 It proposes a board where to store all important datas (wedding place, number of guests, budget...). You can compare your budget to your expenses.
 It also provides tips and links to help the organization.
 In back-office, the administrator is able to Create/Read/Update/Delete every user or project.
 
 ## Install
-You can find the code on github repository (https://github.com/Yann-Fontaine/pff), then run the different commands
+You can find the code on github repository (https://github.com/Yann-Fontaine/pff). 
+It requires Node.js, Composer and the setup of a database MySql.
+In the root, run the different commands
 ```
 npm install
 composer install
@@ -17,7 +22,7 @@ composer install
 
 ### Compiles and hot-reloads for development
 ```
-npm run serve
+npm run dev
 ```
 
 ### Compiles and minifies for production
@@ -30,7 +35,8 @@ npm run build
 php artisan serve
 ```
 
-## Screenshots
+## Preview and Screenshots
+![alt text](https://i.ibb.co/zXYFCQx/output-M0-FBBB.gif)
 ![](public/Screen1.png)
 ![](public/Screen2.png)
 ![](public/Screen3.png)
@@ -49,4 +55,8 @@ php artisan serve
 - Claire Wendlandt
 
 ## Project status
-Made in 2 weeks, it's an End Course Project. It stopped on December 2020, the 11th. 
+Made in 2 weeks, it's an End Course Project. 
+Any contribution is welcome, but no maintenance is programmed.
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)

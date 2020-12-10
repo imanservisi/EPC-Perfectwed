@@ -39,7 +39,7 @@
     <img class="centerimg mt-3 mb-3" src="../../../public/stepbystep/9.png" alt="step9">
       <a href="/step8"><img class="left" src="../../../public/left-arrow.png" alt="arrow" align="left"/></a>
   </div>
-    </app-layout>
+  </app-layout>
 </template>
 
 <script>

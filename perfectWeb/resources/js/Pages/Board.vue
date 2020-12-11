@@ -93,8 +93,7 @@
                     <div for="budget" class="cardbudget" align="center"> Budget total des notes : {{this.sumbudget}} € &ensp;
                     </div>
                 </div>
-        <div class="text-center">
-            <div id="Refresh" for="budget" class="cardbudget" align="center">Budget restant : <Budget :project="this.data"></Budget>€</div>        </div>
+            <div id="Refresh" for="budget" class="cardbudget text-center" align="center">Budget restant : <Budget :project="this.data"> </Budget> €</div>
             </div>
         </div>
         <div class="containerPerso">

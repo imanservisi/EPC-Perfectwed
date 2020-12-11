@@ -1,6 +1,6 @@
 <template>
     <div>
-        <span> {{ this.difference }}</span>
+        <div> {{'&ensp;' + this.difference }} </div>
     </div>
 
 </template>

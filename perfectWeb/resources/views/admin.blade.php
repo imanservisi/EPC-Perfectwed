@@ -1,7 +1,8 @@
 @extends('layouts.layoutAdmin')
 
 @section('contenu')
-<div class="backgroundperfectwedding">
+<body class="backgroundperfectwedding">
+<div >
     <h1>Bienvenue sur la page Admin</h1>
     <br/>
     <div>
@@ -13,11 +14,16 @@
     </div>
     <br/>
 </div>
+</body>
 @endsection
 
 <style>
 .backgroundperfectwedding {
     background-color: floralwhite;
     }
+
+body {
+    background-color: floralwhite;
+}
 
 </style>

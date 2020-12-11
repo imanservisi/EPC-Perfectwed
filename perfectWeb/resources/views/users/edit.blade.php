@@ -1,6 +1,7 @@
 @extends('layouts.layoutAdmin')
 @section('contenu')
-<div class="background">
+<body class="background">
+<div>
     <div class="row">
         <div class="col-sm-8 offset-sm-2">
             <h1 class="display-3">Mise à jour utilisateurs</h1>
@@ -42,6 +43,7 @@
         </div>
     </div>
 </div>
+</body>
 @endsection
 
 <style>

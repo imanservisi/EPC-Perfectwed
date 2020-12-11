@@ -1,7 +1,8 @@
 @extends('layouts.layoutAdmin')
 
 @section('contenu')
-<div class="background">
+<body class="background">
+<div>
     <div>
         <a style="margin: 19px;" href="{{ route('users.create')}}" class="btn btn-primary">Nouvel utilisateur</a>
     </div>
@@ -75,6 +76,7 @@
             </div>
             </div>
         </div>
+</body>
 @endsection
 
 <style>

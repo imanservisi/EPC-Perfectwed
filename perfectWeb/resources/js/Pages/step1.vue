@@ -89,13 +89,15 @@
                         </b-popover>
                     </b-col>
                     <b-col>
-                        <div class="info"><abbr class="abbr">*</abbr><U>Cérémonie(s) (civile, religieuse...) :</U>  <img id="popover-target-1" class="pointinfo" align="right" src="../../../public/PointinfoPINK.png" ></div>
+                        <div class="info"><U>Cérémonie(s) (civile, religieuse...) :</U>  <img id="popover-target-1" class="pointinfo" align="right" src="../../../public/PointinfoPINK.png" ></div>
 
                         <p class="info">Là encore, c'est une question de choix. Mais rappelez-vous que si vous ne faites qu'un mariage religieux, il ne sera pas reconnu par la loi. <br>
                             Vous n'aurez donc aucun des droits y afférant (congés, impôts...)</p>
+                        <!--
                         <b-form-input id="inline-form-input-name" type="number" @change="updatedb()" class="mb-2 mr-sm-2 mb-sm-0" name="ceremony"  :value="data.ceremony" v-model="data.ceremony" placeholder="Nombre de cérémonies">
 
                         </b-form-input>
+                        -->
 
                         <br> <br>
                         <div class="info"><abbr class="abbr">*</abbr><U>Budget prévisionnel :</U></div>
@@ -111,8 +113,8 @@
                             placeholder="Budget prévisionnel"
                         ></b-form-input>
                         <br>
-                        <br>
-                        <div v-if="(data.budget===null || data.budget===undefined) || (data.wed_date===null || data.wed_date===undefined) || (data.title_project===null || data.title_project===undefined) || (data.nb_guest===null || data.nb_guest===undefined) || (data.ceremony===null || data.ceremony===undefined)" class="etapesuivante" align="center" ><b-button class="etapesuivante"> Pour passer à l'étape suivante, remplissez les champs obligatoires &ensp;<img  class="pointinfo" src="../../../public/right-arrow.png" align="right"></b-button></div>
+                        <br><!--|| (data.ceremony===null || data.ceremony===undefined)-->
+                        <div v-if="(data.budget===null || data.budget===undefined) || (data.wed_date===null || data.wed_date===undefined) || (data.title_project===null || data.title_project===undefined) || (data.nb_guest===null || data.nb_guest===undefined)" class="etapesuivante" align="center" ><b-button class="etapesuivante"> Pour passer à l'étape suivante, remplissez les champs obligatoires &ensp;<img  class="pointinfo" src="../../../public/right-arrow.png" align="right"></b-button></div>
                         <div v-else class="etapesuivante" align="center" ><b-button @click="createProject()" > Je valide mon projet et je passe à l'étape suivante !<img  class="pointinfo" src="../../../public/right-arrow.png" align="right"></b-button></div>
                     </b-col>
                 </b-row>

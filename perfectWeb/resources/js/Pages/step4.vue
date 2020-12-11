@@ -18,7 +18,7 @@
             <b-card-title class="right">Le choix du photographe<img id="popover-target-2" class="pointinfo mb-5" src="../../../public/PointinfoPINK.png" align="right">
             </b-card-title>
             <div class="info">Pour immortaliser ce jour, il vous faut une personne de confiance. Cela peut être un ami ou un professionnel, mais dites vous que le résultat final doit être à votre goût.</div>
-            <a href="https://www.mariages.net/photo-mariage/bouches-du-rhone/marseille" target="_blank"><img class="center" src="../../../public/photographer.jpg" alt="photographer" /></a>
+            <a href="https://www.mariages.net/photo-mariage/bouches-du-rhone/marseille" target="_blank"><img class="photo" src="../../../public/photographer.jpg" alt="photographer" /></a>
             <b-popover class="popover" target="popover-target-2" triggers="hover" placement="top">
                 <template #title>Pour être serein</template>
                 <div class="info">
@@ -65,7 +65,7 @@
             <b-card-title class="right">Les alliances<img id="popover-target-4" class="pointinfo mb-5" src="../../../public/PointinfoPINK.png" align="right">
             </b-card-title>
             <div class="info">C'est une question qui va souvent revenir : souhaitez vous des alliances ? A vous de faire de votre choix !<br>
-                <a href="https://www.histoiredor.com/fr_FR/c/bagues/par-type/alliances/" target="_blank"><img class="center" src="../../../public/rings.jpg" alt="rings"/></a></div>
+                <a href="https://www.histoiredor.com/fr_FR/c/bagues/par-type/alliances/" target="_blank"><img class="photo" src="../../../public/rings.jpg" alt="rings"/></a></div>
             <b-popover class="popover" target="popover-target-4" triggers="hover" placement="top">
                 <template #title>Pour bien les choisir</template>
                 <div class="info">
@@ -127,6 +127,10 @@ window.parent.document.title = 'Étape 4'
   min-width: 20vw;
   display: block;
 
+}
+.photo {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .left {

@@ -64,7 +64,7 @@
 
             <div class="backgroundperfectwedding">
                 <br>
-                <div class="concept">Imaginez et realisez le plus beau jour de votre vie !</div>
+                <div class="concept">Imaginez et réalisez le plus beau jour de votre vie !</div>
                 <br>
                 <br>
                 <!-- CARD GROUP -->
@@ -102,7 +102,7 @@
                     <br>
                     <p class="title">Liste</p>
                     <div class='card-text' class="content">
-                        <div style="text-align: center">N’oubliez aucun détail en notant tous les détails importants à la réalisation de votre aventure </div>
+                        <div style="text-align: center">N’oubliez aucun détail en notant tous les détails importants à la réalisation de votre aventure.</div>
                     </div>
                 </div>
             </div>

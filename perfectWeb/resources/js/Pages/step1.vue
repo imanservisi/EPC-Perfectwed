@@ -93,11 +93,6 @@
 
                         <p class="info">Là encore, c'est une question de choix. Mais rappelez-vous que si vous ne faites qu'un mariage religieux, il ne sera pas reconnu par la loi. <br>
                             Vous n'aurez donc aucun des droits y afférant (congés, impôts...)</p>
-                        <!--
-                        <b-form-input id="inline-form-input-name" type="number" @change="updatedb()" class="mb-2 mr-sm-2 mb-sm-0" name="ceremony"  :value="data.ceremony" v-model="data.ceremony" placeholder="Nombre de cérémonies">
-
-                        </b-form-input>
-                        -->
 
                         <br> <br>
                         <div class="info"><abbr class="abbr">*</abbr><U>Budget prévisionnel :</U></div>
@@ -140,7 +135,6 @@ export default {
                 wed_address: null,
                 budget: null,
                 nb_guest: null,
-                ceremony: null,
                 title_project: null,
                 user_id: this.$page.user.id,
                 id: null,

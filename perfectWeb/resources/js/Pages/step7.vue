@@ -12,10 +12,10 @@
         <b-col class="right">
           <b-card-title class="right">Quel temps fera t-il pour mon mariage ?
           </b-card-title>
-          <div class="info">
-              En été comme en hiver, mieux vaut être prévenu. Fera-t-il froid ? Y aura-t-il de la pluie ? Faut il prévoir une sécurité ?<br>
-          <a href="https://meteofrance.com/" target="_blank">Quelle météo pour le Jour J ?</a>
-          </div>
+              <div class="info">
+                  En été comme en hiver, mieux vaut être prévenu. Fera-t-il froid ? Y aura-t-il de la pluie ? Faut il prévoir une sécurité ?<br>
+                  <a target="_blank" :href="this.link">Quelle météo pour le Jour J à <strong>{{data.wed_city}}</strong> ?</a>
+              </div>
           <br>
           <br>
           <b-card-title class="right">Avez-vous prévu une répétition ?
@@ -51,13 +51,69 @@
 </template>
 
 <script>
-  import AppLayout from '@/Layouts/AppLayout'
+import AppLayout from '@/Layouts/AppLayout'
+import axios from 'axios'
 
 export default {
-            components: {
-            AppLayout
+    components: {
+        AppLayout
+    },
+    name: 'step7',
+    data () {
+        return {
+            data: {
+                wed_date: null,
+                wed_address: null,
+                budget: null,
+                nb_guest: null,
+                ceremony: null,
+                title_project: null,
+                user_id: this.$page.user.id,
+                id: null,
+                activated:1
+            },
+            apiProjectsUrl: 'http://localhost:8000/api/projects/',
+            apiOneProjectUrl: 'http://localhost:8000/api/projectWithId/'
+        }
+    },
+    methods: {
+        createProject(){
+            console.log(this.data.id)
+            console.log(this.$page.user.id)
+            if(this.data.id === null || this.data.id === undefined){
+                axios.post(this.apiProjectsUrl, this.data)
+                    .then(()=>{window.location.href = 'step2'}
+                    )
+            }else{
+                window.location.href = 'step2';
+            }
         },
-  name: 'step7'
+        updatedb () {
+            if(this.data.id === null || this.data.id === undefined) {
+                axios.put(
+                    this.apiProjectsUrl + this.data.id, // 1 a remplacer par project id
+                    this.data
+                ).then(function (response) {
+                    console.log(response)
+                })
+            }
+        },
+        gotoStep2 () {
+        }
+    },
+    mounted () {
+        axios.get(this.apiOneProjectUrl + this.$page.user.id ) // remplacer 1 par variable de seession
+            // remplacer 1 par variable de seession
+            .catch(error => console.log(error))
+            .then(response => {
+                console.log(response)
+                if(response.data.length!==0){
+                    this.data = response.data[0]
+                    console.log(this.data)
+                    this.link = 'https://meteofrance.com/recherche/' + this.data.wed_city
+                }
+            })
+    }
 }
 window.parent.document.title = 'Étape 7'
 

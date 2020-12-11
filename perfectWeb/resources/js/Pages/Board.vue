@@ -14,9 +14,9 @@
         </div>
         <div class="containerPerso">
         <b-card class="cardPerso my-3">
-            <b-label for="title_project">Nom du mariage :
+            <b-label for="title_project"><strong>Nom du mariage :</strong>
                 <br>
-                {{ data.title_project }} </b-label>
+                {{ data.title_project }}</b-label>
             <div>
                 <b-button-sm v-b-modal.modal-1 >
                     <img src="../../../public/edit.png" class="modify"></b-button-sm>
@@ -26,7 +26,7 @@
             </div>
         </b-card>
         <b-card class="cardPerso my-3">
-            <b-label for="wed_date">Date :
+            <b-label for="wed_date"><strong>Date :</strong>
                 <br>
                 {{ data.wed_date }}</b-label>
             <div>
@@ -38,7 +38,7 @@
             </div>
         </b-card>
         <b-card class="cardPerso my-3">
-            <b-label for="nb_guest">Nombres d'invités : {{ data.nb_guest }}</b-label>
+            <b-label for="nb_guest"><strong>Nombres d'invités :</strong> {{ data.nb_guest }}</b-label>
             <div>
                 <b-button-sm v-b-modal.modal-3 >
                     <img src="../../../public/edit.png" class="modify"></b-button-sm>
@@ -48,7 +48,7 @@
             </div>
         </b-card>
         <b-card class="cardPerso my-3">
-            <b-label for="wed_city">Ville : {{ data.wed_city }}</b-label>
+            <b-label for="wed_city"><strong>Ville :</strong> {{ data.wed_city }}</b-label>
             <div>
                 <b-button-sm v-b-modal.modal-4 >
                     <img src="../../../public/edit.png" class="modify"></b-button-sm>
@@ -58,7 +58,7 @@
             </div>
         </b-card>
         <b-card class="cardPerso my-3">
-            <b-label for="wed_postal_code">Code postal : {{ data.wed_postal_code }}</b-label>
+            <b-label for="wed_postal_code"><strong>Code postal :</strong> {{ data.wed_postal_code }}</b-label>
             <div>
                 <b-button-sm v-b-modal.modal-5 >
                     <img src="../../../public/edit.png" class="modify"></b-button-sm>
@@ -68,7 +68,7 @@
             </div>
         </b-card>
         <b-card class="cardPerso my-3">
-            <b-label for="wed_address">Adresse : {{ data.wed_address }}</b-label>
+            <b-label for="wed_address"><strong>Adresse :</strong> {{ data.wed_address }}</b-label>
             <div>
                 <b-button-sm v-b-modal.modal-6 >
                     <img src="../../../public/edit.png" class="modify"></b-button-sm>
@@ -81,7 +81,7 @@
         <br>
         <div class="card cardbudget">
             <div class="explication" align="center">
-                Dépenses
+                <strong>  Dépenses </strong>
             </div>
             <div class="card-body">
         <div class="text-center">
@@ -100,8 +100,9 @@
         <div class="containerPerso">
         <b-card class="cardPerso my-3">
             <b-label for="menu">
-                <img src="../../../public/dish.png" class="modify">
-                Traiteur : {{ data.menu }} €</b-label>
+                <img src="../../../public/dish.png" class="image">
+                <br>
+                <strong>Traiteur :</strong> {{ data.menu }} €</b-label>
             <div>
                 <b-button-sm v-b-modal.modal-7 >
                 <img src="../../../public/edit.png" class="modify"></b-button-sm>
@@ -111,9 +112,13 @@
             </div>
         </b-card>
         <b-card class="cardPerso my-3">
+            <b-col>
             <b-label for="hair">
-                <img src="../../../public/haircut.png" class="modify">
-                Coiffeur : {{ data.hair }} €</b-label>
+                <img src="../../../public/haircut.png" class="image">
+                <br>
+                <strong>Coiffeur :</strong> {{ data.hair }} €</b-label>
+            </b-col>
+            <b-col>
             <div>
                 <b-button-sm v-b-modal.modal-8 >
                     <img src="../../../public/edit.png" class="modify"></b-button-sm>
@@ -121,9 +126,12 @@
                     <b-input type="number" name="hair" :value="data.hair" v-model="data.hair" @change="updatedb()" placeholder="Coiffeur"></b-input>
                 </b-modal>
             </div>
+            </b-col>
         </b-card>
         <b-card class="cardPerso my-3">
-            <b-label for="ring">Alliances : {{ data.ring }} €</b-label>
+            <img src="../../../public/ring.png" class="image">
+            <br>
+            <b-label for="ring"><strong>Alliances :</strong> {{ data.ring }} €</b-label>
             <div>
                 <b-button-sm v-b-modal.modal-9 >
                     <img src="../../../public/edit.png" class="modify"></b-button-sm>
@@ -133,7 +141,9 @@
             </div>
         </b-card>
         <b-card class="cardPerso my-3">
-            <b-label for="makeup">Maquillage : {{ data.makeup }} €</b-label>
+            <img src="../../../public/makeup.png" class="image">
+            <br>
+            <b-label for="makeup"><strong>Maquillage :</strong> {{ data.makeup }} €</b-label>
             <div>
                 <b-button-sm v-b-modal.modal-10 >
                     <img src="../../../public/edit.png" class="modify"></b-button-sm>
@@ -143,9 +153,9 @@
             </div>
         </b-card>
         <b-card class="cardPerso my-3">
-         <b-label v-if="(data.decoration==null) || (data.decoration==undefined)" for="decoration">Décoration : {{$forceUpdate(data.decoration=0)}} 0 €</b-label>
-            <b-label v-else="data.decoration" for="decoration">Décoration : {{data.decoration}}</b-label>
-            <!-- <b-label for="decoration">Décoration : {{data.decoration}} €</b-label> -->
+            <img src="../../../public/garland.png" class="image">
+            <br>
+            <b-label for="decoration"><strong>Décoration :</strong> {{(data.decoration)}} €</b-label><!-- <b-label for="decoration">Décoration : {{data.decoration}} €</b-label> -->
 
             <div>
                 <b-button-sm v-b-modal.modal-11 >
@@ -156,7 +166,9 @@
             </div>
         </b-card>
         <b-card class="cardPerso my-3">
-            <b-label for="wine">Boissons : {{ data.wine }} €</b-label>
+            <img src="../../../public/cheers.png" class="image">
+            <br>
+            <b-label for="wine"><strong>Boissons :</strong> {{ data.wine }} €</b-label>
             <div>
                 <b-button-sm v-b-modal.modal-12 >
                     <img src="../../../public/edit.png" class="modify"></b-button-sm>
@@ -166,7 +178,9 @@
             </div>
         </b-card>
         <b-card class="cardPerso my-3">
-            <b-label for="transport">Transport : {{ data.transport }} €</b-label>
+            <img src="../../../public/transportation.png" class="image">
+            <br>
+            <b-label for="transport"><strong>Transport :</strong> {{ data.transport }} €</b-label>
             <div>
                 <b-button-sm v-b-modal.modal-13 >
                     <img src="../../../public/edit.png" class="modify"></b-button-sm>
@@ -176,7 +190,9 @@
             </div>
         </b-card>
         <b-card class="cardPerso my-3">
-            <b-label for="animation">Animation : {{ data.animation }} €</b-label>
+            <img src="../../../public/shining.png" class="image">
+            <br>
+            <b-label for="animation"><strong>Animation :</strong> {{ data.animation }} €</b-label>
             <div>
                 <b-button-sm v-b-modal.modal-14 >
                     <img src="../../../public/edit.png" class="modify"></b-button-sm>
@@ -186,7 +202,9 @@
             </div>
         </b-card>
         <b-card class="cardPerso my-3">
-            <b-label for="place_price">Lieu : {{ data.place_price }} €</b-label>
+            <img src="../../../public/wedding-arch.png" class="image">
+            <br>
+            <b-label for="place_price"><strong>Lieu :</strong> {{ data.place_price }} €</b-label>
             <div>
                 <b-button-sm v-b-modal.modal-15 >
                     <img src="../../../public/edit.png" class="modify"></b-button-sm>
@@ -196,7 +214,9 @@
             </div>
         </b-card>
         <b-card class="cardPerso my-3">
-            <b-label for="photo">Photographe : {{ data.photo}} €</b-label>
+            <img src="../../../public/photographer.png" class="image">
+            <br>
+            <b-label for="photo"><strong>Photographe :</strong> {{ data.photo}} €</b-label>
             <div>
                 <b-button-sm v-b-modal.modal-16 >
                     <img src="../../../public/edit.png" class="modify"></b-button-sm>
@@ -206,7 +226,9 @@
             </div>
         </b-card>
         <b-card class="cardPerso my-3">
-            <b-label for="costume">Tenues : {{ data.costume }} €</b-label>
+            <img src="../../../public/wedding-dress.png" class="image">
+            <br>
+            <b-label for="costume"><strong>Tenues : </strong>{{ data.costume }} €</b-label>
             <div>
                 <b-button-sm v-b-modal.modal-17 >
                     <img src="../../../public/edit.png" class="modify"></b-button-sm>
@@ -216,7 +238,9 @@
             </div>
         </b-card>
         <b-card class="cardPerso my-3">
-            <b-label for="announcement">Faire-parts : {{ data.announcement }} €</b-label>
+            <img src="../../../public/email.png" class="image">
+            <br>
+            <b-label for="announcement"><strong>Faire-parts :</strong> {{ data.announcement }} €</b-label>
             <div>
                 <b-button-sm v-b-modal.modal-18 >
                     <img src="../../../public/edit.png" class="modify"></b-button-sm>
@@ -226,7 +250,9 @@
             </div>
         </b-card>
         <b-card class="cardPerso my-3">
-            <b-label for="ceremony">Ceremonie(s) : {{ data.ceremony }} €</b-label>
+            <img src="../../../public/home.png" class="image">
+            <br>
+            <b-label for="ceremony"><strong>Ceremonie :</strong> {{ data.ceremony }} €</b-label>
             <div>
                 <b-button-sm v-b-modal.modal-19 >
                     <img src="../../../public/edit.png" class="modify"></b-button-sm>
@@ -236,7 +262,9 @@
             </div>
         </b-card>
         <b-card class="cardPerso my-3">
-            <b-label for="flower">Fleurs : {{ data.flower}} €</b-label>
+            <img src="../../../public/flowers.png" class="image">
+            <br>
+            <b-label for="flower"><strong>Fleurs :</strong> {{ data.flower}} €</b-label>
             <div>
                 <b-button-sm v-b-modal.modal-20 >
                     <img src="../../../public/edit.png" class="modify"></b-button-sm>
@@ -249,14 +277,12 @@
                 <b-input type="number" name="budget" :value="data.budget" v-model="data.budget" @change="updatedb()"  placeholder="Budget"></b-input>
             </b-modal>
     </div>
-    <google-map />
     </app-layout>
 </template>
 
 <script>
 import axios from 'axios'
 import AppLayout from '@/Layouts/AppLayout'
-import GoogleMap from "./Google/GoogleMap"
 import Budget from "./Budget"
 import FlipCountdown from 'vue2-flip-countdown'
 
@@ -330,7 +356,6 @@ export default {
     },
     components: {
         AppLayout,
-        GoogleMap,
         Budget,
         FlipCountdown
     }
@@ -408,6 +433,13 @@ b-label {
     display: flex;
     margin-left: auto;
     height: 30px
+}
+
+.image {
+    display: flex;
+    text-align: center;
+    margin-right:auto;
+    height: 60px
 }
 .explication {
     transition-delay : 0.5s;

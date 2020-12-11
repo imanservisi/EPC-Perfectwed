@@ -6,11 +6,11 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateProjectsTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
+/*
+* Run the migrations.
+*
+* @return void
+*/
     public function up()
     {
         Schema::create('projects', function (Blueprint $table) {
@@ -21,33 +21,33 @@ class CreateProjectsTable extends Migration
             $table->string('wed_city')->nullable();
             $table->integer('wed_postal_code')->nullable();
             $table->string('wed_address')->nullable();
-            $table->float('budget')->nullable();
-            $table->float('menu')->nullable();
-            $table->float('hair')->nullable();
-            $table->float('ring')->nullable();
-            $table->float('makeup')->nullable();
-            $table->float('decoration')->nullable();
-            $table->float('wine')->nullable();
-            $table->float('transport')->nullable();
-            $table->float('animation')->nullable();
-            $table->float('place_price')->nullable();
-            $table->float('photo')->nullable();
-            $table->float('costume')->nullable();
-            $table->float('announcement')->nullable();
-            $table->float('nb_guest')->nullable();
-            $table->float('ceremony')->nullable();
-            $table->float('flower')->nullable();
-            $table->float('other')->nullable();
+            $table->float('budget')->default('0');
+            $table->float('menu') ->default('0');
+            $table->float('hair')->default('0');
+            $table->float('ring')->default('0');
+            $table->float('makeup')->default('0');
+            $table->float('decoration')->default('0');
+            $table->float('wine')->default('0');
+            $table->float('transport')->default('0');
+            $table->float('animation')->default('0');
+            $table->float('place_price')->default('0');
+            $table->float('photo')->default('0');
+            $table->float('costume')->default('0');
+            $table->float('announcement')->default('0');
+            $table->float('nb_guest')->default('0');
+            $table->float('ceremony')->default('0');
+            $table->float('flower')->default('0');
+            $table->float('other')->default('0');
             $table->boolean('activated')->default(true);
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
+/*
+* Reverse the migrations.
+*
+* @return void
+*/
     public function down()
     {
         Schema::dropIfExists('projects');

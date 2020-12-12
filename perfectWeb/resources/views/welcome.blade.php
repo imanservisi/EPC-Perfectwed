@@ -111,7 +111,7 @@
                <!--<img src="../../../public/weddingultimate.jpg" height="2435" width="5171"/>-->
               </div>
                 <div class="d-flex justify-content-center">
-                <button type="button" class="btn text-white pull-center text-center" style="background-color:#B6244F" ><a href='/step1' style="color:white">COMMENCER !</a></button>
+                <button type="button" class="btn text-white pull-center text-center" style="background-color:#B6244F" ><a href='/step1' style="color:white">COMMENCEZ !</a></button>
                 </div>
                 </div>
         <script async defer src="//assets.pinterest.com/js/pinit.js"></script>
